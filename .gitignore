@@ -1,0 +1,13 @@
+*.bin
+*.disasm
+*.elf
+*.hex
+*.map
+*.o
+*.d
+*.a
+*.layout
+*.save
+/tests/build/
+/stm32/_backup/
+/stm32/_build/

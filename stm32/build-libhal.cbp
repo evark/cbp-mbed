@@ -1,0 +1,2243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="libmbed" />
+		<Option pch_mode="2" />
+		<Option compiler="gnu_gcc_compiler_for_arm_5" />
+		<Build>
+			<Target title="libmbed-nucleo-f103rb">
+				<Option output="variants/NUCLEO_F103RB/libmbed.a" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="_build/lib/${TARGET_NAME}" />
+				<Option type="2" />
+				<Option compiler="gnu_gcc_compiler_for_arm_5" />
+				<Compiler>
+					<Add option="-mcpu=cortex-m3" />
+					<Add option="-mthumb" />
+					<Add option="-mfpu=vfp" />
+					<Add option="-msoft-float" />
+					<Add option="-mthumb-interwork" />
+					<Add option="-D__CORTEX_M3" />
+					<Add option="-D__FPU_PRESENT=0" />
+					<Add option="-DARM_MATH_CM3" />
+					<Add option="-DTARGET_NUCLEO_F103RB" />
+					<Add option="-DTARGET_M3" />
+					<Add option="-DTARGET_CORTEX_M" />
+					<Add option="-DTARGET_STM" />
+					<Add option="-DTARGET_STM32F1" />
+					<Add option="-DTARGET_STM32F103RB" />
+					<Add option="-DTARGET_FF_ARDUINO" />
+					<Add option="-DTARGET_FF_MORPHO" />
+					<Add directory="system/CMSIS/STM32F1xx/Include" />
+					<Add directory="system/STM32F1xx_HAL_Driver/Inc" />
+					<Add directory="system/targets/STM32F1xx" />
+					<Add directory="variants/NUCLEO_F103RB" />
+				</Compiler>
+			</Target>
+			<Target title="libmbed-nucleo-f401re">
+				<Option output="variants/NUCLEO_F401RE/libmbed.a" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="_build/lib/${TARGET_NAME}" />
+				<Option type="2" />
+				<Option compiler="gnu_gcc_compiler_for_arm_5" />
+				<Compiler>
+					<Add option="-mcpu=cortex-m4" />
+					<Add option="-mthumb" />
+					<Add option="-mfpu=fpv4-sp-d16" />
+					<Add option="-mfloat-abi=softfp" />
+					<Add option="-mthumb-interwork" />
+					<Add option="-D__CORTEX_M4" />
+					<Add option="-D__FPU_PRESENT=1" />
+					<Add option="-DARM_MATH_CM4" />
+					<Add option="-DTARGET_NUCLEO_F401RE" />
+					<Add option="-DTARGET_M4" />
+					<Add option="-DTARGET_RTOS_M4_M7" />
+					<Add option="-DTARGET_CORTEX_M" />
+					<Add option="-DTARGET_STM" />
+					<Add option="-DTARGET_STM32F4" />
+					<Add option="-DTARGET_STM32F401RE" />
+					<Add option="-DTARGET_FF_ARDUINO" />
+					<Add option="-DTARGET_FF_MORPHO" />
+					<Add directory="system/CMSIS/STM32F4xx/Include" />
+					<Add directory="system/STM32F4xx_HAL_Driver/Inc" />
+					<Add directory="system/targets/STM32F4xx" />
+					<Add directory="variants/NUCLEO_F401RE" />
+				</Compiler>
+			</Target>
+			<Target title="libmbed-nucleo-l476rg">
+				<Option output="variants/NUCLEO_L476RG/libmbed.a" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="_build/lib/${TARGET_NAME}" />
+				<Option type="2" />
+				<Option compiler="gnu_gcc_compiler_for_arm_5" />
+				<Compiler>
+					<Add option="-mthumb" />
+					<Add option="-mthumb-interwork" />
+					<Add option="-mcpu=cortex-m4" />
+					<Add option="-mfpu=fpv4-sp-d16" />
+					<Add option="-mfloat-abi=softfp" />
+					<Add option="-D__CORTEX_M4" />
+					<Add option="-D__FPU_PRESENT=1" />
+					<Add option="-DARM_MATH_CM4" />
+					<Add option="-DTARGET_NUCLEO_L476RG" />
+					<Add option="-DTARGET_M4" />
+					<Add option="-DTARGET_RTOS_M4_M7" />
+					<Add option="-DTARGET_CORTEX_M" />
+					<Add option="-DTARGET_STM" />
+					<Add option="-DTARGET_STM32L4" />
+					<Add option="-DTARGET_STM32L476RG" />
+					<Add option="-DTARGET_FF_ARDUINO" />
+					<Add option="-DTARGET_FF_MORPHO" />
+					<Add directory="system/CMSIS/STM32L4xx/Include" />
+					<Add directory="system/STM32L4xx_HAL_Driver/Inc" />
+					<Add directory="system/targets/STM32L4xx" />
+					<Add directory="variants/NUCLEO_L476RG" />
+				</Compiler>
+			</Target>
+			<Target title="libmbed-bluepill-f103c8">
+				<Option output="variants/BLUEPILL_F103C8/libmbed.a" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="_build/lib/${TARGET_NAME}" />
+				<Option type="2" />
+				<Option compiler="gnu_gcc_compiler_for_arm_5" />
+				<Compiler>
+					<Add option="-mcpu=cortex-m3" />
+					<Add option="-mthumb" />
+					<Add option="-mfpu=vfp" />
+					<Add option="-msoft-float" />
+					<Add option="-mthumb-interwork" />
+					<Add option="-D__CORTEX_M3" />
+					<Add option="-D__FPU_PRESENT=0" />
+					<Add option="-DARM_MATH_CM3" />
+					<Add option="-DTARGET_NUCLEO_F103RB" />
+					<Add option="-DTARGET_M3" />
+					<Add option="-DTARGET_CORTEX_M" />
+					<Add option="-DTARGET_STM" />
+					<Add option="-DTARGET_STM32F1" />
+					<Add option="-DTARGET_STM32F103RB" />
+					<Add option="-DTARGET_FF_ARDUINO" />
+					<Add option="-DTARGET_FF_MORPHO" />
+					<Add directory="system/CMSIS/STM32F1xx/Include" />
+					<Add directory="system/STM32F1xx_HAL_Driver/Inc" />
+					<Add directory="system/targets/STM32F1xx" />
+					<Add directory="variants/NUCLEO_F103RB" />
+				</Compiler>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="ALL" targets="libmbed-nucleo-f103rb;libmbed-nucleo-f401re;libmbed-nucleo-l476rg;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-fomit-frame-pointer" />
+			<Add option="-Os" />
+			<Add option="-Wextra" />
+			<Add option="-Wall" />
+			<Add option="-ffunction-sections" />
+			<Add option="-fdata-sections" />
+			<Add option="-fno-exceptions" />
+			<Add option="-fno-delete-null-pointer-checks" />
+			<Add option="-g3" />
+			<Add option="-Wno-unused-parameter" />
+			<Add option="-Wno-missing-field-initializers" />
+			<Add option="-Wno-missing-braces" />
+			<Add option="-fno-rtti" />
+			<Add option="-std=gnu++11" />
+			<Add option="-std=gnu99" />
+			<Add option="-MMD" />
+			<Add option="-MP" />
+			<Add option="-DTOOLCHAIN_GCC" />
+			<Add option="-D__MBED__=1" />
+			<Add option="-D_C99_SOURCE" />
+			<Add option="-DNDEBUG" />
+			<Add directory="system/CMSIS/Include" />
+			<Add directory="system/hal" />
+			<Add directory="system/api" />
+		</Compiler>
+		<Unit filename="system/CMSIS/Include/arm_common_tables.h" />
+		<Unit filename="system/CMSIS/Include/arm_const_structs.h" />
+		<Unit filename="system/CMSIS/Include/arm_math.h" />
+		<Unit filename="system/CMSIS/Include/core_ca9.h" />
+		<Unit filename="system/CMSIS/Include/core_caFunc.h" />
+		<Unit filename="system/CMSIS/Include/core_caInstr.h" />
+		<Unit filename="system/CMSIS/Include/core_ca_mmu.h" />
+		<Unit filename="system/CMSIS/Include/core_cm0.h" />
+		<Unit filename="system/CMSIS/Include/core_cm0plus.h" />
+		<Unit filename="system/CMSIS/Include/core_cm3.h" />
+		<Unit filename="system/CMSIS/Include/core_cm4.h" />
+		<Unit filename="system/CMSIS/Include/core_cm4_simd.h" />
+		<Unit filename="system/CMSIS/Include/core_cm7.h" />
+		<Unit filename="system/CMSIS/Include/core_cmFunc.h" />
+		<Unit filename="system/CMSIS/Include/core_cmInstr.h" />
+		<Unit filename="system/CMSIS/Include/core_cmSecureAccess.h" />
+		<Unit filename="system/CMSIS/Include/core_cmSimd.h" />
+		<Unit filename="system/CMSIS/Include/core_sc000.h" />
+		<Unit filename="system/CMSIS/Include/core_sc300.h" />
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can_ex.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cec.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_conf.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_crc.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dac.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dac_ex.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_eth.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_hcd.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2s.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_irda.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_iwdg.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_nand.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_nor.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pccard.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc_ex.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_sd.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_smartcard.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_sram.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_usart.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_wwdg.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_fsmc.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_sdmmc.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_crc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_hcd.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_irda.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nor.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sd.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_smartcard.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_wwdg.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_fsmc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_sdmmc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32_hal_legacy.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cec.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_conf_template.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cryp.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cryp_ex.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dac.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dac_ex.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dcmi.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dcmi_ex.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dfsdm.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma2d.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dsi.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_eth.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_fmpi2c.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_fmpi2c_ex.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hash.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hash_ex.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2s.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2s_ex.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_irda.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_iwdg.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_lptim.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_nand.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_nor.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pccard.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_qspi.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rng.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sai.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sai_ex.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sd.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sdram.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_smartcard.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spdifrx.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_usart.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_wwdg.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fmc.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_sdmmc.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cec.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cryp.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cryp_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dac.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dac_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dcmi.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dcmi_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dfsdm.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma2d.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dsi.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_fmpi2c.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_fmpi2c_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_hash.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_hash_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_hcd.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_irda.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_iwdg.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_lptim.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_msp_template.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_nand.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_nor.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pccard.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_qspi.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sai.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sai_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sdram.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_smartcard.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spdifrx.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_usart.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fsmc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32_hal_legacy.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_adc.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_adc_ex.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_can.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_comp.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_cortex.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_crc.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_crc_ex.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_cryp.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_cryp_ex.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dac.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dac_ex.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dfsdm.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_firewall.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ex.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ramfunc.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio_ex.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_hcd.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_irda.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_irda_ex.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_iwdg.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_lcd.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_lptim.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_nand.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_nor.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_opamp.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_opamp_ex.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd_ex.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_qspi.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc_ex.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rng.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rtc.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rtc_ex.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_sai.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_sd.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_smartcard.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_smartcard_ex.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_smbus.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_sram.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_swpmi.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tsc.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_usart.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_usart_ex.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_wwdg.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_bus.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_comp.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_cortex.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_crc.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_crs.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dac.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_dma.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_exti.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_fmc.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_gpio.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_i2c.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_iwdg.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_lptim.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_lpuart.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_opamp.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_pwr.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_rcc.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_rng.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_rtc.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_sdmmc.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_spi.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_swpmi.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_system.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_tim.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usart.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_utils.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_wwdg.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_can.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_comp.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_crc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_crc_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cryp.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cryp_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dfsdm.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_firewall.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_hcd.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_irda.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_iwdg.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_lcd.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_lptim.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_msp_template.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_nand.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_nor.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_opamp.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_opamp_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_qspi.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rtc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rtc_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sai.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sd.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_smartcard.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_smartcard_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_smbus.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sram.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_swpmi.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tsc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_usart.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_wwdg.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_adc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_comp.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_crc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_crs.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dac.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_dma.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_exti.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_fmc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_gpio.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_i2c.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_lptim.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_lpuart.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_opamp.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_pwr.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rcc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rng.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_rtc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_sdmmc.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_spi.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_swpmi.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_tim.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usart.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usb.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_utils.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/api/AnalogIn.h" />
+		<Unit filename="system/api/AnalogOut.h" />
+		<Unit filename="system/api/BusIn.h" />
+		<Unit filename="system/api/BusInOut.h" />
+		<Unit filename="system/api/BusOut.h" />
+		<Unit filename="system/api/CAN.h" />
+		<Unit filename="system/api/CThunk.h" />
+		<Unit filename="system/api/CallChain.h" />
+		<Unit filename="system/api/Callback.h" />
+		<Unit filename="system/api/CircularBuffer.h" />
+		<Unit filename="system/api/DigitalIn.h" />
+		<Unit filename="system/api/DigitalInOut.h" />
+		<Unit filename="system/api/DigitalOut.h" />
+		<Unit filename="system/api/DirHandle.h" />
+		<Unit filename="system/api/Ethernet.h" />
+		<Unit filename="system/api/FileBase.h" />
+		<Unit filename="system/api/FileHandle.h" />
+		<Unit filename="system/api/FileLike.h" />
+		<Unit filename="system/api/FilePath.h" />
+		<Unit filename="system/api/FileSystemLike.h" />
+		<Unit filename="system/api/FunctionPointer.h" />
+		<Unit filename="system/api/I2C.h" />
+		<Unit filename="system/api/I2CSlave.h" />
+		<Unit filename="system/api/InterruptIn.h" />
+		<Unit filename="system/api/InterruptManager.h" />
+		<Unit filename="system/api/LocalFileSystem.h" />
+		<Unit filename="system/api/LowPowerTicker.h" />
+		<Unit filename="system/api/LowPowerTimeout.h" />
+		<Unit filename="system/api/LowPowerTimer.h" />
+		<Unit filename="system/api/PortIn.h" />
+		<Unit filename="system/api/PortInOut.h" />
+		<Unit filename="system/api/PortOut.h" />
+		<Unit filename="system/api/PwmOut.h" />
+		<Unit filename="system/api/RawSerial.h" />
+		<Unit filename="system/api/SPI.h" />
+		<Unit filename="system/api/SPISlave.h" />
+		<Unit filename="system/api/Serial.h" />
+		<Unit filename="system/api/SerialBase.h" />
+		<Unit filename="system/api/SingletonPtr.h" />
+		<Unit filename="system/api/Stream.h" />
+		<Unit filename="system/api/Ticker.h" />
+		<Unit filename="system/api/Timeout.h" />
+		<Unit filename="system/api/Timer.h" />
+		<Unit filename="system/api/TimerEvent.h" />
+		<Unit filename="system/api/Transaction.h" />
+		<Unit filename="system/api/can_helper.h" />
+		<Unit filename="system/api/critical.h" />
+		<Unit filename="system/api/mbed.h" />
+		<Unit filename="system/api/mbed_assert.h" />
+		<Unit filename="system/api/mbed_debug.h" />
+		<Unit filename="system/api/mbed_error.h" />
+		<Unit filename="system/api/mbed_interface.h" />
+		<Unit filename="system/api/platform.h" />
+		<Unit filename="system/api/rtc_time.h" />
+		<Unit filename="system/api/semihost_api.h" />
+		<Unit filename="system/api/toolchain.h" />
+		<Unit filename="system/api/wait_api.h" />
+		<Unit filename="system/common/AnalogIn.cpp" />
+		<Unit filename="system/common/BusIn.cpp" />
+		<Unit filename="system/common/BusInOut.cpp" />
+		<Unit filename="system/common/BusOut.cpp" />
+		<Unit filename="system/common/CAN.cpp" />
+		<Unit filename="system/common/CallChain.cpp" />
+		<Unit filename="system/common/Ethernet.cpp" />
+		<Unit filename="system/common/FileBase.cpp" />
+		<Unit filename="system/common/FileLike.cpp" />
+		<Unit filename="system/common/FilePath.cpp" />
+		<Unit filename="system/common/FileSystemLike.cpp" />
+		<Unit filename="system/common/I2C.cpp" />
+		<Unit filename="system/common/I2CSlave.cpp" />
+		<Unit filename="system/common/InterruptIn.cpp" />
+		<Unit filename="system/common/InterruptManager.cpp" />
+		<Unit filename="system/common/LocalFileSystem.cpp" />
+		<Unit filename="system/common/RawSerial.cpp" />
+		<Unit filename="system/common/SPI.cpp" />
+		<Unit filename="system/common/SPISlave.cpp" />
+		<Unit filename="system/common/Serial.cpp" />
+		<Unit filename="system/common/SerialBase.cpp" />
+		<Unit filename="system/common/Stream.cpp" />
+		<Unit filename="system/common/Ticker.cpp" />
+		<Unit filename="system/common/Timeout.cpp" />
+		<Unit filename="system/common/Timer.cpp" />
+		<Unit filename="system/common/TimerEvent.cpp" />
+		<Unit filename="system/common/assert.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="system/common/board.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="system/common/critical.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="system/common/error.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="system/common/gpio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="system/common/lp_ticker_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="system/common/mbed_interface.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="system/common/pinmap_common.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="system/common/retarget.cpp" />
+		<Unit filename="system/common/rtc_time.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="system/common/semihost_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="system/common/ticker_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="system/common/us_ticker_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="system/common/wait_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="system/hal/analogin_api.h" />
+		<Unit filename="system/hal/analogout_api.h" />
+		<Unit filename="system/hal/buffer.h" />
+		<Unit filename="system/hal/can_api.h" />
+		<Unit filename="system/hal/dma_api.h" />
+		<Unit filename="system/hal/ethernet_api.h" />
+		<Unit filename="system/hal/gpio_api.h" />
+		<Unit filename="system/hal/gpio_irq_api.h" />
+		<Unit filename="system/hal/i2c_api.h" />
+		<Unit filename="system/hal/lp_ticker_api.h" />
+		<Unit filename="system/hal/pinmap.h" />
+		<Unit filename="system/hal/port_api.h" />
+		<Unit filename="system/hal/pwmout_api.h" />
+		<Unit filename="system/hal/rtc_api.h" />
+		<Unit filename="system/hal/serial_api.h" />
+		<Unit filename="system/hal/sleep_api.h" />
+		<Unit filename="system/hal/spi_api.h" />
+		<Unit filename="system/hal/storage_abstraction/Driver_Common.h" />
+		<Unit filename="system/hal/storage_abstraction/Driver_Storage.h" />
+		<Unit filename="system/hal/ticker_api.h" />
+		<Unit filename="system/hal/us_ticker_api.h" />
+		<Unit filename="system/targets/STM32F1xx/PeripheralPins.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/targets/STM32F1xx/analogin_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/targets/STM32F1xx/can_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/targets/STM32F1xx/common_objects.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/targets/STM32F1xx/gpio_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/targets/STM32F1xx/gpio_irq_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/targets/STM32F1xx/gpio_object.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/targets/STM32F1xx/i2c_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/targets/STM32F1xx/mbed_overrides.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/targets/STM32F1xx/pinmap.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/targets/STM32F1xx/port_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/targets/STM32F1xx/pwmout_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/targets/STM32F1xx/rtc_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/targets/STM32F1xx/serial_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/targets/STM32F1xx/sleep.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/targets/STM32F1xx/spi_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/targets/STM32F1xx/us_ticker.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/targets/STM32F4xx/PeripheralPins.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/targets/STM32F4xx/analogin_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/targets/STM32F4xx/analogout_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/targets/STM32F4xx/can_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/targets/STM32F4xx/common_objects.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/targets/STM32F4xx/gpio_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/targets/STM32F4xx/gpio_irq_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/targets/STM32F4xx/gpio_object.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/targets/STM32F4xx/i2c_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/targets/STM32F4xx/mbed_overrides.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/targets/STM32F4xx/pinmap.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/targets/STM32F4xx/port_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/targets/STM32F4xx/pwmout_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/targets/STM32F4xx/rtc_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/targets/STM32F4xx/serial_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/targets/STM32F4xx/sleep.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/targets/STM32F4xx/spi_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/targets/STM32F4xx/us_ticker.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/targets/STM32L4xx/PeripheralPins.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/targets/STM32L4xx/analogin_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/targets/STM32L4xx/analogout_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/targets/STM32L4xx/can_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/targets/STM32L4xx/common_objects.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/targets/STM32L4xx/gpio_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/targets/STM32L4xx/gpio_irq_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/targets/STM32L4xx/gpio_object.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/targets/STM32L4xx/i2c_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/targets/STM32L4xx/mbed_overrides.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/targets/STM32L4xx/pinmap.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/targets/STM32L4xx/port_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/targets/STM32L4xx/pwmout_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/targets/STM32L4xx/rtc_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/targets/STM32L4xx/serial_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/targets/STM32L4xx/sleep.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/targets/STM32L4xx/spi_api.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/targets/STM32L4xx/us_ticker.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="variants/BLUEPILL_F103C8/PeripheralNames.h">
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="variants/BLUEPILL_F103C8/PeripheralPins.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="variants/BLUEPILL_F103C8/PinNames.h">
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="variants/BLUEPILL_F103C8/PortNames.h">
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="variants/BLUEPILL_F103C8/cmsis.h">
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="variants/BLUEPILL_F103C8/cmsis_nvic.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="variants/BLUEPILL_F103C8/cmsis_nvic.h">
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="variants/BLUEPILL_F103C8/device.h">
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="variants/BLUEPILL_F103C8/hal_tick.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="variants/BLUEPILL_F103C8/hal_tick.h">
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="variants/BLUEPILL_F103C8/objects.h">
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="variants/BLUEPILL_F103C8/startup_stm32f103xb.S">
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="variants/BLUEPILL_F103C8/stm32f103xb.h">
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="variants/BLUEPILL_F103C8/stm32f1xx.h">
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="variants/BLUEPILL_F103C8/system_stm32f1xx.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="variants/BLUEPILL_F103C8/system_stm32f1xx.h">
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F103RB/PeripheralNames.h">
+			<Option target="libmbed-nucleo-f103rb" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F103RB/PeripheralPins.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F103RB/PinNames.h">
+			<Option target="libmbed-nucleo-f103rb" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F103RB/PortNames.h">
+			<Option target="libmbed-nucleo-f103rb" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F103RB/cmsis.h">
+			<Option target="libmbed-nucleo-f103rb" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F103RB/cmsis_nvic.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F103RB/cmsis_nvic.h">
+			<Option target="libmbed-nucleo-f103rb" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F103RB/device.h">
+			<Option target="libmbed-nucleo-f103rb" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F103RB/hal_tick.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F103RB/hal_tick.h">
+			<Option target="libmbed-nucleo-f103rb" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F103RB/objects.h">
+			<Option target="libmbed-nucleo-f103rb" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F103RB/startup_stm32f103xb.S">
+			<Option target="libmbed-nucleo-f103rb" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F103RB/stm32f103xb.h">
+			<Option target="libmbed-nucleo-f103rb" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F103RB/stm32f1xx.h">
+			<Option target="libmbed-nucleo-f103rb" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F103RB/system_stm32f1xx.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F103RB/system_stm32f1xx.h">
+			<Option target="libmbed-nucleo-f103rb" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F401RE/PeripheralNames.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F401RE/PeripheralPins.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F401RE/PinNames.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F401RE/PortNames.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F401RE/cmsis.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F401RE/cmsis_nvic.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F401RE/cmsis_nvic.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F401RE/device.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F401RE/hal_tick.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F401RE/hal_tick.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F401RE/objects.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F401RE/startup_stm32f401xe.S">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F401RE/stm32f401xe.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F401RE/stm32f4xx.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F401RE/stm32f4xx_hal_conf.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F401RE/system_stm32f4xx.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_F401RE/system_stm32f4xx.h">
+			<Option target="libmbed-nucleo-f401re" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_L476RG/PeripheralNames.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_L476RG/PeripheralPins.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_L476RG/PinNames.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_L476RG/PortNames.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_L476RG/cmsis.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_L476RG/cmsis_nvic.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_L476RG/cmsis_nvic.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_L476RG/device.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_L476RG/hal_tick.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_L476RG/hal_tick.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_L476RG/objects.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_L476RG/startup_stm32l476xx.S">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_L476RG/stm32l476xx.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_L476RG/stm32l4xx.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_L476RG/stm32l4xx_hal_conf.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_L476RG/system_stm32l4xx.c">
+			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="variants/NUCLEO_L476RG/system_stm32l4xx.h">
+			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<lib_finder disable_auto="1" />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

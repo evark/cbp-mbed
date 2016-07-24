@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="tests" />
+		<Option pch_mode="2" />
+		<Option compiler="gnu_gcc_compiler_for_arm_5" />
+		<Build>
+			<Target title="blank-f103xb">
+				<Option output="_build/${TARGET_NAME}/${TARGET_NAME}" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="_build/${TARGET_NAME}" />
+				<Option type="5" />
+				<Option compiler="gnu_gcc_compiler_for_arm_5" />
+				<Compiler>
+					<Add option="-mcpu=cortex-m3" />
+					<Add option="-mthumb" />
+					<Add option="-mfpu=vfp" />
+					<Add option="-msoft-float" />
+					<Add option="-mthumb-interwork" />
+					<Add option="-D__CORTEX_M3" />
+					<Add option="-D__FPU_PRESENT=0" />
+					<Add option="-DARM_MATH_CM3" />
+					<Add option="-DTARGET_NUCLEO_F103RB" />
+					<Add option="-DTARGET_M3" />
+					<Add option="-DTARGET_CORTEX_M" />
+					<Add option="-DTARGET_STM" />
+					<Add option="-DTARGET_STM32F1" />
+					<Add option="-DTARGET_STM32F103RB" />
+					<Add option="-DTARGET_FF_ARDUINO" />
+					<Add option="-DTARGET_FF_MORPHO" />
+					<Add directory="system/CMSIS/STM32F1xx/Include" />
+					<Add directory="system/STM32F1xx_HAL_Driver/Inc" />
+					<Add directory="system/targets/STM32F1xx" />
+					<Add directory="variants/NUCLEO_F103RB" />
+				</Compiler>
+				<Linker>
+					<Add option="-mcpu=cortex-m3" />
+					<Add option="-msoft-float" />
+					<Add option="-mfpu=vfp" />
+					<Add option="-TSTM32F103XB.ld" />
+					<Add option="-Wl,-whole-archive variants/NUCLEO_F103RB/libmbed.a -Wl,-no-whole-archive" />
+					<Add option="-lstdc++" />
+					<Add option="-lsupc++" />
+					<Add option="-lm" />
+					<Add option="-lgcc" />
+					<Add option="-lc" />
+					<Add option="-lnosys" />
+					<Add directory="variants/NUCLEO_F103RB" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="arm-none-eabi-size $(TARGET_OUTPUT_FILE)" />
+					<Add after="arm-none-eabi-objcopy  -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).bin" />
+				</ExtraCommands>
+			</Target>
+			<Target title="blank-f401xe">
+				<Option output="_build/${TARGET_NAME}/${TARGET_NAME}" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="_build/${TARGET_NAME}" />
+				<Option type="5" />
+				<Option compiler="gnu_gcc_compiler_for_arm_5" />
+				<Compiler>
+					<Add option="-mcpu=cortex-m4" />
+					<Add option="-mthumb" />
+					<Add option="-mfpu=fpv4-sp-d16" />
+					<Add option="-mfloat-abi=softfp" />
+					<Add option="-mthumb-interwork" />
+					<Add option="-D__CORTEX_M4" />
+					<Add option="-D__FPU_PRESENT=1" />
+					<Add option="-DARM_MATH_CM4" />
+					<Add option="-DTARGET_NUCLEO_F401RE" />
+					<Add option="-DTARGET_M4" />
+					<Add option="-DTARGET_RTOS_M4_M7" />
+					<Add option="-DTARGET_CORTEX_M" />
+					<Add option="-DTARGET_STM" />
+					<Add option="-DTARGET_STM32F4" />
+					<Add option="-DTARGET_STM32F401RE" />
+					<Add option="-DTARGET_FF_ARDUINO" />
+					<Add option="-DTARGET_FF_MORPHO" />
+					<Add directory="system/CMSIS/STM32F4xx/Include" />
+					<Add directory="system/STM32F4xx_HAL_Driver/Inc" />
+					<Add directory="system/targets/STM32F4xx" />
+					<Add directory="variants/NUCLEO_F401RE" />
+				</Compiler>
+				<Linker>
+					<Add option="-mcpu=cortex-m4" />
+					<Add option="-mfpu=fpv4-sp-d16" />
+					<Add option="-mfloat-abi=softfp" />
+					<Add option="-TSTM32F401XE.ld" />
+					<Add option="-Wl,-whole-archive variants/NUCLEO_F401RE/libmbed.a -Wl,-no-whole-archive" />
+					<Add option="-lstdc++" />
+					<Add option="-lsupc++" />
+					<Add option="-lm" />
+					<Add option="-lgcc" />
+					<Add option="-lc" />
+					<Add option="-lnosys" />
+					<Add directory="variants/NUCLEO_F401RE" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="arm-none-eabi-size $(TARGET_OUTPUT_FILE)" />
+					<Add after="arm-none-eabi-objcopy  -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).bin" />
+				</ExtraCommands>
+			</Target>
+			<Target title="blank-l476xx">
+				<Option output="_build/${TARGET_NAME}/${TARGET_NAME}" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="_build/${TARGET_NAME}" />
+				<Option type="5" />
+				<Option compiler="gnu_gcc_compiler_for_arm_5" />
+				<Compiler>
+					<Add option="-mthumb" />
+					<Add option="-mthumb-interwork" />
+					<Add option="-mcpu=cortex-m4" />
+					<Add option="-mfpu=fpv4-sp-d16" />
+					<Add option="-mfloat-abi=softfp" />
+					<Add option="-D__CORTEX_M4" />
+					<Add option="-D__FPU_PRESENT=1" />
+					<Add option="-DARM_MATH_CM4" />
+					<Add option="-DTARGET_NUCLEO_L476RG" />
+					<Add option="-DTARGET_M4" />
+					<Add option="-DTARGET_RTOS_M4_M7" />
+					<Add option="-DTARGET_CORTEX_M" />
+					<Add option="-DTARGET_STM" />
+					<Add option="-DTARGET_STM32L4" />
+					<Add option="-DTARGET_STM32L476RG" />
+					<Add option="-DTARGET_FF_ARDUINO" />
+					<Add option="-DTARGET_FF_MORPHO" />
+					<Add directory="system/CMSIS/STM32L4xx/Include" />
+					<Add directory="system/STM32L4xx_HAL_Driver/Inc" />
+					<Add directory="system/targets/STM32L4xx" />
+					<Add directory="variants/NUCLEO_L476RG" />
+				</Compiler>
+				<Linker>
+					<Add option="-mcpu=cortex-m4" />
+					<Add option="-mfpu=fpv4-sp-d16" />
+					<Add option="-mfloat-abi=softfp" />
+					<Add option="-TSTM32L476XX.ld" />
+					<Add option="-Wl,-whole-archive variants/NUCLEO_L476RG/libmbed.a -Wl,-no-whole-archive" />
+					<Add option="-lstdc++" />
+					<Add option="-lsupc++" />
+					<Add option="-lm" />
+					<Add option="-lgcc" />
+					<Add option="-lc" />
+					<Add option="-lnosys" />
+					<Add directory="variants/NUCLEO_L476RG" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="arm-none-eabi-size $(TARGET_OUTPUT_FILE)" />
+					<Add after="arm-none-eabi-objcopy  -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).bin" />
+				</ExtraCommands>
+			</Target>
+			<Target title="stdio-l476xx">
+				<Option output="_build/${TARGET_NAME}/${TARGET_NAME}" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="_build/${TARGET_NAME}" />
+				<Option type="5" />
+				<Option compiler="gnu_gcc_compiler_for_arm_5" />
+				<Compiler>
+					<Add option="-mthumb" />
+					<Add option="-mthumb-interwork" />
+					<Add option="-mcpu=cortex-m4" />
+					<Add option="-mfpu=fpv4-sp-d16" />
+					<Add option="-mfloat-abi=softfp" />
+					<Add option="-D__CORTEX_M4" />
+					<Add option="-D__FPU_PRESENT=1" />
+					<Add option="-DARM_MATH_CM4" />
+					<Add option="-DTARGET_NUCLEO_L476RG" />
+					<Add option="-DTARGET_M4" />
+					<Add option="-DTARGET_RTOS_M4_M7" />
+					<Add option="-DTARGET_CORTEX_M" />
+					<Add option="-DTARGET_STM" />
+					<Add option="-DTARGET_STM32L4" />
+					<Add option="-DTARGET_STM32L476RG" />
+					<Add option="-DTARGET_FF_ARDUINO" />
+					<Add option="-DTARGET_FF_MORPHO" />
+					<Add directory="system/CMSIS/STM32L4xx/Include" />
+					<Add directory="system/STM32L4xx_HAL_Driver/Inc" />
+					<Add directory="system/targets/STM32L4xx" />
+					<Add directory="variants/NUCLEO_L476RG" />
+				</Compiler>
+				<Linker>
+					<Add option="-mcpu=cortex-m4" />
+					<Add option="-mfpu=fpv4-sp-d16" />
+					<Add option="-mfloat-abi=softfp" />
+					<Add option="-TSTM32L476XX.ld" />
+					<Add option="-Wl,-whole-archive variants/NUCLEO_L476RG/libmbed.a -Wl,-no-whole-archive" />
+					<Add option="-lstdc++" />
+					<Add option="-lsupc++" />
+					<Add option="-lm" />
+					<Add option="-lgcc" />
+					<Add option="-lc" />
+					<Add option="-lnosys" />
+					<Add directory="variants/NUCLEO_L476RG" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="arm-none-eabi-size $(TARGET_OUTPUT_FILE)" />
+					<Add after="arm-none-eabi-objcopy  -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).bin" />
+				</ExtraCommands>
+			</Target>
+			<Target title="uart-l476xx">
+				<Option output="_build/${TARGET_NAME}/${TARGET_NAME}" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="_build/${TARGET_NAME}" />
+				<Option type="5" />
+				<Option compiler="gnu_gcc_compiler_for_arm_5" />
+				<Compiler>
+					<Add option="-mthumb" />
+					<Add option="-mthumb-interwork" />
+					<Add option="-mcpu=cortex-m4" />
+					<Add option="-mfpu=fpv4-sp-d16" />
+					<Add option="-mfloat-abi=softfp" />
+					<Add option="-D__CORTEX_M4" />
+					<Add option="-D__FPU_PRESENT=1" />
+					<Add option="-DARM_MATH_CM4" />
+					<Add option="-DTARGET_NUCLEO_L476RG" />
+					<Add option="-DTARGET_M4" />
+					<Add option="-DTARGET_RTOS_M4_M7" />
+					<Add option="-DTARGET_CORTEX_M" />
+					<Add option="-DTARGET_STM" />
+					<Add option="-DTARGET_STM32L4" />
+					<Add option="-DTARGET_STM32L476RG" />
+					<Add option="-DTARGET_FF_ARDUINO" />
+					<Add option="-DTARGET_FF_MORPHO" />
+					<Add directory="system/CMSIS/STM32L4xx/Include" />
+					<Add directory="system/STM32L4xx_HAL_Driver/Inc" />
+					<Add directory="system/targets/STM32L4xx" />
+					<Add directory="variants/NUCLEO_L476RG" />
+				</Compiler>
+				<Linker>
+					<Add option="-mcpu=cortex-m4" />
+					<Add option="-mfpu=fpv4-sp-d16" />
+					<Add option="-mfloat-abi=softfp" />
+					<Add option="-TSTM32L476XX.ld" />
+					<Add option="-Wl,-whole-archive variants/NUCLEO_L476RG/libmbed.a -Wl,-no-whole-archive" />
+					<Add option="-lstdc++" />
+					<Add option="-lsupc++" />
+					<Add option="-lm" />
+					<Add option="-lgcc" />
+					<Add option="-lc" />
+					<Add option="-lnosys" />
+					<Add directory="variants/NUCLEO_L476RG" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="arm-none-eabi-size $(TARGET_OUTPUT_FILE)" />
+					<Add after="arm-none-eabi-objcopy  -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).bin" />
+				</ExtraCommands>
+			</Target>
+			<Target title="stdio-f103xb">
+				<Option output="_build/${TARGET_NAME}/${TARGET_NAME}" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="_build/${TARGET_NAME}" />
+				<Option type="5" />
+				<Option compiler="gnu_gcc_compiler_for_arm_5" />
+				<Compiler>
+					<Add option="-mcpu=cortex-m3" />
+					<Add option="-mthumb" />
+					<Add option="-mfpu=vfp" />
+					<Add option="-msoft-float" />
+					<Add option="-mthumb-interwork" />
+					<Add option="-D__CORTEX_M3" />
+					<Add option="-D__FPU_PRESENT=0" />
+					<Add option="-DARM_MATH_CM3" />
+					<Add option="-DTARGET_NUCLEO_F103RB" />
+					<Add option="-DTARGET_M3" />
+					<Add option="-DTARGET_CORTEX_M" />
+					<Add option="-DTARGET_STM" />
+					<Add option="-DTARGET_STM32F1" />
+					<Add option="-DTARGET_STM32F103RB" />
+					<Add option="-DTARGET_FF_ARDUINO" />
+					<Add option="-DTARGET_FF_MORPHO" />
+					<Add directory="system/CMSIS/STM32F1xx/Include" />
+					<Add directory="system/STM32F1xx_HAL_Driver/Inc" />
+					<Add directory="system/targets/STM32F1xx" />
+					<Add directory="variants/NUCLEO_F103RB" />
+				</Compiler>
+				<Linker>
+					<Add option="-mcpu=cortex-m3" />
+					<Add option="-msoft-float" />
+					<Add option="-mfpu=vfp" />
+					<Add option="-TSTM32F103XB.ld" />
+					<Add option="-Wl,-whole-archive variants/NUCLEO_F103RB/libmbed.a -Wl,-no-whole-archive" />
+					<Add option="-lstdc++" />
+					<Add option="-lsupc++" />
+					<Add option="-lm" />
+					<Add option="-lgcc" />
+					<Add option="-lc" />
+					<Add option="-lnosys" />
+					<Add directory="variants/NUCLEO_F103RB" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="arm-none-eabi-size $(TARGET_OUTPUT_FILE)" />
+					<Add after="arm-none-eabi-objcopy  -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).bin" />
+				</ExtraCommands>
+			</Target>
+			<Target title="uart-bluepill">
+				<Option output="_build/${TARGET_NAME}/${TARGET_NAME}" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="_build/${TARGET_NAME}" />
+				<Option type="5" />
+				<Option compiler="gnu_gcc_compiler_for_arm_5" />
+				<Compiler>
+					<Add option="-mcpu=cortex-m3" />
+					<Add option="-mthumb" />
+					<Add option="-mfpu=vfp" />
+					<Add option="-mthumb-interwork" />
+					<Add option="-msoft-float" />
+					<Add option="-D__CORTEX_M3" />
+					<Add option="-D__FPU_PRESENT=0" />
+					<Add option="-DARM_MATH_CM3" />
+					<Add option="-DTARGET_NUCLEO_F103RB" />
+					<Add option="-DTARGET_M3" />
+					<Add option="-DTARGET_CORTEX_M" />
+					<Add option="-DTARGET_STM" />
+					<Add option="-DTARGET_STM32F1" />
+					<Add option="-DTARGET_STM32F103RB" />
+					<Add option="-DTARGET_FF_ARDUINO" />
+					<Add option="-DTARGET_FF_MORPHO" />
+					<Add directory="system/CMSIS/STM32F1xx/Include" />
+					<Add directory="system/STM32F1xx_HAL_Driver/Inc" />
+					<Add directory="system/targets/STM32F1xx" />
+					<Add directory="variants/BLUEPILL_F103C8" />
+				</Compiler>
+				<Linker>
+					<Add option="-mcpu=cortex-m3" />
+					<Add option="-msoft-float" />
+					<Add option="-mfpu=vfp" />
+					<Add option="-TSTM32F103XB.ld" />
+					<Add option="-Wl,-whole-archive variants/BLUEPILL_F103C8/libmbed.a -Wl,-no-whole-archive" />
+					<Add option="-lstdc++" />
+					<Add option="-lsupc++" />
+					<Add option="-lm" />
+					<Add option="-lgcc" />
+					<Add option="-lc" />
+					<Add option="-lnosys" />
+					<Add directory="variants/BLUEPILL_F103C8" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="arm-none-eabi-size $(TARGET_OUTPUT_FILE)" />
+					<Add after="arm-none-eabi-objcopy  -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).bin" />
+				</ExtraCommands>
+			</Target>
+			<Target title="ssd1306-bluepill">
+				<Option output="_build/${TARGET_NAME}/${TARGET_NAME}" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="_build/${TARGET_NAME}" />
+				<Option type="5" />
+				<Option compiler="gnu_gcc_compiler_for_arm_5" />
+				<Compiler>
+					<Add option="-mcpu=cortex-m3" />
+					<Add option="-mthumb" />
+					<Add option="-mfpu=vfp" />
+					<Add option="-mthumb-interwork" />
+					<Add option="-msoft-float" />
+					<Add option="-D__CORTEX_M3" />
+					<Add option="-D__FPU_PRESENT=0" />
+					<Add option="-DARM_MATH_CM3" />
+					<Add option="-DTARGET_NUCLEO_F103RB" />
+					<Add option="-DTARGET_M3" />
+					<Add option="-DTARGET_CORTEX_M" />
+					<Add option="-DTARGET_STM" />
+					<Add option="-DTARGET_STM32F1" />
+					<Add option="-DTARGET_STM32F103RB" />
+					<Add option="-DTARGET_FF_ARDUINO" />
+					<Add option="-DTARGET_FF_MORPHO" />
+					<Add directory="system/CMSIS/STM32F1xx/Include" />
+					<Add directory="system/STM32F1xx_HAL_Driver/Inc" />
+					<Add directory="system/targets/STM32F1xx" />
+					<Add directory="variants/BLUEPILL_F103C8" />
+				</Compiler>
+				<Linker>
+					<Add option="-mcpu=cortex-m3" />
+					<Add option="-msoft-float" />
+					<Add option="-mfpu=vfp" />
+					<Add option="-TSTM32F103XB.ld" />
+					<Add option="-Wl,-whole-archive variants/BLUEPILL_F103C8/libmbed.a -Wl,-no-whole-archive" />
+					<Add option="-lstdc++" />
+					<Add option="-lsupc++" />
+					<Add option="-lm" />
+					<Add option="-lgcc" />
+					<Add option="-lc" />
+					<Add option="-lnosys" />
+					<Add directory="variants/BLUEPILL_F103C8" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="arm-none-eabi-size $(TARGET_OUTPUT_FILE)" />
+					<Add after="arm-none-eabi-objcopy  -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).bin" />
+				</ExtraCommands>
+			</Target>
+			<Target title="i2c-bluepill">
+				<Option output="_build/${TARGET_NAME}/${TARGET_NAME}" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="_build/${TARGET_NAME}" />
+				<Option type="5" />
+				<Option compiler="gnu_gcc_compiler_for_arm_5" />
+				<Compiler>
+					<Add option="-mcpu=cortex-m3" />
+					<Add option="-mthumb" />
+					<Add option="-mfpu=vfp" />
+					<Add option="-mthumb-interwork" />
+					<Add option="-msoft-float" />
+					<Add option="-D__CORTEX_M3" />
+					<Add option="-D__FPU_PRESENT=0" />
+					<Add option="-DARM_MATH_CM3" />
+					<Add option="-DTARGET_NUCLEO_F103RB" />
+					<Add option="-DTARGET_M3" />
+					<Add option="-DTARGET_CORTEX_M" />
+					<Add option="-DTARGET_STM" />
+					<Add option="-DTARGET_STM32F1" />
+					<Add option="-DTARGET_STM32F103RB" />
+					<Add option="-DTARGET_FF_ARDUINO" />
+					<Add option="-DTARGET_FF_MORPHO" />
+					<Add directory="system/CMSIS/STM32F1xx/Include" />
+					<Add directory="system/STM32F1xx_HAL_Driver/Inc" />
+					<Add directory="system/targets/STM32F1xx" />
+					<Add directory="variants/BLUEPILL_F103C8" />
+				</Compiler>
+				<Linker>
+					<Add option="-mcpu=cortex-m3" />
+					<Add option="-msoft-float" />
+					<Add option="-mfpu=vfp" />
+					<Add option="-TSTM32F103XB.ld" />
+					<Add option="-Wl,-whole-archive variants/BLUEPILL_F103C8/libmbed.a -Wl,-no-whole-archive" />
+					<Add option="-lstdc++" />
+					<Add option="-lsupc++" />
+					<Add option="-lm" />
+					<Add option="-lgcc" />
+					<Add option="-lc" />
+					<Add option="-lnosys" />
+					<Add directory="variants/BLUEPILL_F103C8" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="arm-none-eabi-size $(TARGET_OUTPUT_FILE)" />
+					<Add after="arm-none-eabi-objcopy  -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).bin" />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-fomit-frame-pointer" />
+			<Add option="-Os" />
+			<Add option="-Wextra" />
+			<Add option="-Wall" />
+			<Add option="-ffunction-sections" />
+			<Add option="-fdata-sections" />
+			<Add option="-fno-exceptions" />
+			<Add option="-fno-delete-null-pointer-checks" />
+			<Add option="-g3" />
+			<Add option="-Wno-unused-parameter" />
+			<Add option="-Wno-missing-field-initializers" />
+			<Add option="-Wno-missing-braces" />
+			<Add option="-fno-rtti" />
+			<Add option="-std=gnu++11" />
+			<Add option="-std=gnu99" />
+			<Add option="-MMD" />
+			<Add option="-MP" />
+			<Add option="-DTOOLCHAIN_GCC" />
+			<Add option="-D__MBED__=1" />
+			<Add option="-D_C99_SOURCE" />
+			<Add option="-DNDEBUG" />
+			<Add option="-DMRI_ENABLE=0" />
+			<Add option="-DMRI_BREAK_ON_INIT=0" />
+			<Add option="-DMRI_SEMIHOST_STDIO=0" />
+			<Add directory="system/CMSIS/Include" />
+			<Add directory="system/hal" />
+			<Add directory="system/api" />
+			<Add directory="gcc4mbed" />
+		</Compiler>
+		<Linker>
+			<Add option="-Os" />
+			<Add option="-specs=gcc4mbed/startfile.spec" />
+			<Add option="-Wl,-Map=$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).map,--cref,--gc-sections,-zmuldefs,--wrap=_isatty,--wrap=malloc,--wrap=realloc,--wrap=free,--wrap=main" />
+			<Add option="-specs=gcc4mbed/nano.specs" />
+			<Add option="-mthumb" />
+		</Linker>
+		<Unit filename="gcc4mbed/gcc4mbed.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tests/Blank/main.cpp">
+			<Option target="blank-f103xb" />
+			<Option target="blank-f401xe" />
+			<Option target="blank-l476xx" />
+		</Unit>
+		<Unit filename="tests/SSD1306/Adafruit_GFX.cpp">
+			<Option target="ssd1306-bluepill" />
+		</Unit>
+		<Unit filename="tests/SSD1306/Adafruit_GFX.h">
+			<Option target="ssd1306-bluepill" />
+		</Unit>
+		<Unit filename="tests/SSD1306/Adafruit_GFX_Config.h">
+			<Option target="ssd1306-bluepill" />
+		</Unit>
+		<Unit filename="tests/SSD1306/Adafruit_SSD1306.cpp">
+			<Option target="ssd1306-bluepill" />
+		</Unit>
+		<Unit filename="tests/SSD1306/Adafruit_SSD1306.h">
+			<Option target="ssd1306-bluepill" />
+		</Unit>
+		<Unit filename="tests/SSD1306/glcdfont.h">
+			<Option target="ssd1306-bluepill" />
+		</Unit>
+		<Unit filename="tests/SSD1306/main.cpp">
+			<Option target="ssd1306-bluepill" />
+		</Unit>
+		<Unit filename="tests/Stdio/main.cpp">
+			<Option target="stdio-l476xx" />
+			<Option target="stdio-f103xb" />
+		</Unit>
+		<Unit filename="tests/Uart/main.cpp">
+			<Option target="uart-l476xx" />
+			<Option target="uart-bluepill" />
+		</Unit>
+		<Unit filename="tests/i2c/main.cpp">
+			<Option target="i2c-bluepill" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
