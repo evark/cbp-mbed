@@ -8,6 +8,7 @@
 *.a
 *.layout
 *.save
+*.depend
 /tests/build/
 /stm32/_backup/
 /stm32/_build/
