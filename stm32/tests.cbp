@@ -481,6 +481,54 @@
 					<Add after="arm-none-eabi-objcopy  -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).bin" />
 				</ExtraCommands>
 			</Target>
+			<Target title="AnalogIn-HelloWorld-l476xx">
+				<Option output="_build/${TARGET_NAME}/${TARGET_NAME}" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="_build/${TARGET_NAME}" />
+				<Option type="5" />
+				<Option compiler="gnu_gcc_compiler_for_arm_5" />
+				<Compiler>
+					<Add option="-mthumb" />
+					<Add option="-mthumb-interwork" />
+					<Add option="-mcpu=cortex-m4" />
+					<Add option="-mfpu=fpv4-sp-d16" />
+					<Add option="-mfloat-abi=softfp" />
+					<Add option="-D__CORTEX_M4" />
+					<Add option="-D__FPU_PRESENT=1" />
+					<Add option="-DARM_MATH_CM4" />
+					<Add option="-DTARGET_NUCLEO_L476RG" />
+					<Add option="-DTARGET_M4" />
+					<Add option="-DTARGET_RTOS_M4_M7" />
+					<Add option="-DTARGET_CORTEX_M" />
+					<Add option="-DTARGET_STM" />
+					<Add option="-DTARGET_STM32L4" />
+					<Add option="-DTARGET_STM32L476RG" />
+					<Add option="-DTARGET_FF_ARDUINO" />
+					<Add option="-DTARGET_FF_MORPHO" />
+					<Add directory="system/CMSIS/STM32L4xx/Include" />
+					<Add directory="system/STM32L4xx_HAL_Driver/Inc" />
+					<Add directory="system/targets/STM32L4xx" />
+					<Add directory="variants/NUCLEO_L476RG" />
+				</Compiler>
+				<Linker>
+					<Add option="-mcpu=cortex-m4" />
+					<Add option="-mfpu=fpv4-sp-d16" />
+					<Add option="-mfloat-abi=softfp" />
+					<Add option="-TSTM32L476XX.ld" />
+					<Add option="-Wl,-whole-archive variants/NUCLEO_L476RG/libmbed.a -Wl,-no-whole-archive" />
+					<Add option="-lstdc++" />
+					<Add option="-lsupc++" />
+					<Add option="-lm" />
+					<Add option="-lgcc" />
+					<Add option="-lc" />
+					<Add option="-lnosys" />
+					<Add directory="variants/NUCLEO_L476RG" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="arm-none-eabi-size $(TARGET_OUTPUT_FILE)" />
+					<Add after="arm-none-eabi-objcopy  -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).bin" />
+				</ExtraCommands>
+			</Target>
 		</Build>
 		<VirtualTargets>
 			<Add alias="ALL" targets="blank-f103xb;blank-f401xe;blank-l476xx;stdio-l476xx;uart-l476xx;stdio-f103xb;uart-bluepill;ssd1306-bluepill;i2c-bluepill;uart-f401xe;" />
@@ -516,6 +564,9 @@
 			<Add option="-specs=gcc4mbed/nano.specs" />
 			<Add option="-mthumb" />
 		</Linker>
+		<Unit filename="tests/AnalogIn-HelloWorld/main.cpp">
+			<Option target="AnalogIn-HelloWorld-l476xx" />
+		</Unit>
 		<Unit filename="tests/Blank/main.cpp">
 			<Option target="blank-f103xb" />
 			<Option target="blank-f401xe" />

@@ -47,12 +47,12 @@
 #define DEVICE_SPI              1
 #define DEVICE_SPISLAVE         1
 
-#define DEVICE_RTC              0
+#define DEVICE_RTC              1
 #define DEVICE_RTC_LSI          0
 
 #define DEVICE_PWMOUT           1
 
-#define DEVICE_SLEEP            0
+#define DEVICE_SLEEP            1
 
 //=======================================
 
@@ -62,7 +62,7 @@
 
 #define DEVICE_DEBUG_AWARENESS  0
 
-#define DEVICE_STDIO_MESSAGES   0
+#define DEVICE_STDIO_MESSAGES   1
 
 #define DEVICE_ERROR_RED        0
 

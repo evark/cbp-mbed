@@ -20,11 +20,13 @@ int main()
 {
     int Value = -1;
 
-    printf("\r\n\r\nGCC4MBED Test Suite\r\n");
+    printf("\r\n\r\nMBED Test Suite\r\n");
     printf("Standard I/O Unit Tests\r\n");
 
-    printf("ClockFreq: %d\n",HAL_RCC_GetSysClockFreq() );
-
+    printf("ClockFreq: %lu\r\n",HAL_RCC_GetSysClockFreq() );
+    printf("PCLK1Freq: %lu\r\n",HAL_RCC_GetPCLK1Freq());
+    printf("PCLK2Freq: %lu\r\n",HAL_RCC_GetPCLK2Freq());
+    printf("HCLKFreq:  %lu\r\n",HAL_RCC_GetHCLKFreq());
     for(;;)
     {
         printf("%d ",Value++);
