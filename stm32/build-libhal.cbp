@@ -16,8 +16,8 @@
 					<Add option="-mcpu=cortex-m3" />
 					<Add option="-mthumb" />
 					<Add option="-mfpu=vfp" />
-					<Add option="-msoft-float" />
 					<Add option="-mthumb-interwork" />
+					<Add option="-msoft-float" />
 					<Add option="-D__CORTEX_M3" />
 					<Add option="-D__FPU_PRESENT=0" />
 					<Add option="-DARM_MATH_CM3" />
@@ -126,11 +126,11 @@
 			</Target>
 		</Build>
 		<VirtualTargets>
-			<Add alias="ALL" targets="libmbed-nucleo-f103rb;libmbed-nucleo-f401re;libmbed-nucleo-l476rg;" />
+			<Add alias="ALL" targets="libmbed-nucleo-f103rb;libmbed-nucleo-f401re;libmbed-nucleo-l476rg;libmbed-bluepill-f103c8;" />
 		</VirtualTargets>
 		<Compiler>
 			<Add option="-fomit-frame-pointer" />
-			<Add option="-Os" />
+			<Add option="-O0" />
 			<Add option="-Wextra" />
 			<Add option="-Wall" />
 			<Add option="-ffunction-sections" />
@@ -1738,46 +1738,46 @@
 		<Unit filename="system/common/Timeout.cpp" />
 		<Unit filename="system/common/Timer.cpp" />
 		<Unit filename="system/common/TimerEvent.cpp" />
-		<Unit filename="system/common/assert.c">
+		<Unit filename="system/common/mbed_assert.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="system/common/board.c">
+		<Unit filename="system/common/mbed_board.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="system/common/critical.c">
+		<Unit filename="system/common/mbed_critical.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="system/common/error.c">
+		<Unit filename="system/common/mbed_error.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="system/common/gpio.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="system/common/lp_ticker_api.c">
+		<Unit filename="system/common/mbed_gpio.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="system/common/mbed_interface.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="system/common/pinmap_common.c">
+		<Unit filename="system/common/mbed_lp_ticker_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="system/common/mbed_pinmap_common.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="system/common/mbed_rtc_time.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="system/common/mbed_semihost_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="system/common/mbed_ticker_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="system/common/mbed_us_ticker_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="system/common/mbed_wait_api.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="system/common/retarget.cpp" />
-		<Unit filename="system/common/rtc_time.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="system/common/semihost_api.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="system/common/ticker_api.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="system/common/us_ticker_api.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="system/common/wait_api.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="system/hal/analogin_api.h" />
 		<Unit filename="system/hal/analogout_api.h" />
 		<Unit filename="system/hal/buffer.h" />

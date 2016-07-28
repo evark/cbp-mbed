@@ -3,7 +3,7 @@
 */
 #include "mbed.h"
 
-Serial pc(SERIAL_TX, SERIAL_RX,
+Serial pc(SERIAL_TX, SERIAL_RX);
 DigitalOut myled(LED1);
 I2C i2c(I2C_SDA, I2C_SCL);
 

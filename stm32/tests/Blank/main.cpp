@@ -2,10 +2,12 @@
    to be built under GCC.
 */
 #include "mbed.h"
-
-int main() 
+volatile int i=0;
+int main()
 {
-    while(1) 
+    while(1)
     {
+        i++;
+        HAL_Delay(50);
     }
 }
