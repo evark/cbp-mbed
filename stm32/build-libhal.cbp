@@ -130,9 +130,9 @@
 		</VirtualTargets>
 		<Compiler>
 			<Add option="-fomit-frame-pointer" />
-			<Add option="-O0" />
 			<Add option="-Wextra" />
 			<Add option="-Wall" />
+			<Add option="-O0" />
 			<Add option="-ffunction-sections" />
 			<Add option="-fdata-sections" />
 			<Add option="-fno-exceptions" />
@@ -154,6 +154,9 @@
 			<Add directory="system/hal" />
 			<Add directory="system/api" />
 		</Compiler>
+		<Unit filename="gcc4mbed/gcc4mbed.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="system/CMSIS/Include/arm_common_tables.h" />
 		<Unit filename="system/CMSIS/Include/arm_const_structs.h" />
 		<Unit filename="system/CMSIS/Include/arm_math.h" />
