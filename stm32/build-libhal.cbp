@@ -124,9 +124,40 @@
 					<Add directory="variants/NUCLEO_F103RB" />
 				</Compiler>
 			</Target>
+			<Target title="librtos-nucleo-f401re">
+				<Option output="variants/NUCLEO_F401RE/librtos.a" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="_build/lib/${TARGET_NAME}" />
+				<Option type="2" />
+				<Option compiler="gnu_gcc_compiler_for_arm_5" />
+				<Compiler>
+					<Add option="-mthumb" />
+					<Add option="-mthumb-interwork" />
+					<Add option="-mcpu=cortex-m4" />
+					<Add option="-mfpu=fpv4-sp-d16" />
+					<Add option="-mfloat-abi=softfp" />
+					<Add option="-D__CORTEX_M4" />
+					<Add option="-D__FPU_PRESENT=1" />
+					<Add option="-DARM_MATH_CM4" />
+					<Add option="-DTARGET_NUCLEO_F401RE" />
+					<Add option="-DTARGET_M4" />
+					<Add option="-DTARGET_RTOS_M4_M7" />
+					<Add option="-DTARGET_CORTEX_M" />
+					<Add option="-DTARGET_STM" />
+					<Add option="-DTARGET_STM32F4" />
+					<Add option="-DTARGET_STM32F401RE" />
+					<Add option="-DTARGET_FF_ARDUINO" />
+					<Add option="-DTARGET_FF_MORPHO" />
+					<Add directory="system/CMSIS/STM32F4xx/Include" />
+					<Add directory="system/STM32F4xx_HAL_Driver/Inc" />
+					<Add directory="system/targets/STM32F4xx" />
+					<Add directory="variants/NUCLEO_F401RE" />
+					<Add directory="system/rtos/rtx/TARGET_CORTEX_M" />
+				</Compiler>
+			</Target>
 		</Build>
 		<VirtualTargets>
-			<Add alias="ALL" targets="libmbed-nucleo-f103rb;libmbed-nucleo-f401re;libmbed-nucleo-l476rg;libmbed-bluepill-f103c8;" />
+			<Add alias="ALL" targets="libmbed-nucleo-f103rb;libmbed-nucleo-f401re;libmbed-nucleo-l476rg;libmbed-bluepill-f103c8;librtos-nucleo-f401re;" />
 		</VirtualTargets>
 		<Compiler>
 			<Add option="-fomit-frame-pointer" />
@@ -156,26 +187,125 @@
 		</Compiler>
 		<Unit filename="gcc4mbed/gcc4mbed.c">
 			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
 		</Unit>
-		<Unit filename="system/CMSIS/Include/arm_common_tables.h" />
-		<Unit filename="system/CMSIS/Include/arm_const_structs.h" />
-		<Unit filename="system/CMSIS/Include/arm_math.h" />
-		<Unit filename="system/CMSIS/Include/core_ca9.h" />
-		<Unit filename="system/CMSIS/Include/core_caFunc.h" />
-		<Unit filename="system/CMSIS/Include/core_caInstr.h" />
-		<Unit filename="system/CMSIS/Include/core_ca_mmu.h" />
-		<Unit filename="system/CMSIS/Include/core_cm0.h" />
-		<Unit filename="system/CMSIS/Include/core_cm0plus.h" />
-		<Unit filename="system/CMSIS/Include/core_cm3.h" />
-		<Unit filename="system/CMSIS/Include/core_cm4.h" />
-		<Unit filename="system/CMSIS/Include/core_cm4_simd.h" />
-		<Unit filename="system/CMSIS/Include/core_cm7.h" />
-		<Unit filename="system/CMSIS/Include/core_cmFunc.h" />
-		<Unit filename="system/CMSIS/Include/core_cmInstr.h" />
-		<Unit filename="system/CMSIS/Include/core_cmSecureAccess.h" />
-		<Unit filename="system/CMSIS/Include/core_cmSimd.h" />
-		<Unit filename="system/CMSIS/Include/core_sc000.h" />
-		<Unit filename="system/CMSIS/Include/core_sc300.h" />
+		<Unit filename="system/CMSIS/Include/arm_common_tables.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/CMSIS/Include/arm_const_structs.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/CMSIS/Include/arm_math.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/CMSIS/Include/core_ca9.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/CMSIS/Include/core_caFunc.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/CMSIS/Include/core_caInstr.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/CMSIS/Include/core_ca_mmu.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/CMSIS/Include/core_cm0.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/CMSIS/Include/core_cm0plus.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/CMSIS/Include/core_cm3.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/CMSIS/Include/core_cm4.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/CMSIS/Include/core_cm4_simd.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/CMSIS/Include/core_cm7.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/CMSIS/Include/core_cmFunc.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/CMSIS/Include/core_cmInstr.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/CMSIS/Include/core_cmSecureAccess.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/CMSIS/Include/core_cmSimd.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/CMSIS/Include/core_sc000.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/CMSIS/Include/core_sc300.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
 		<Unit filename="system/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h">
 			<Option target="libmbed-nucleo-f103rb" />
 			<Option target="libmbed-bluepill-f103c8" />
@@ -1658,149 +1788,899 @@
 			<Option compilerVar="CC" />
 			<Option target="libmbed-nucleo-l476rg" />
 		</Unit>
-		<Unit filename="system/api/AnalogIn.h" />
-		<Unit filename="system/api/AnalogOut.h" />
-		<Unit filename="system/api/BusIn.h" />
-		<Unit filename="system/api/BusInOut.h" />
-		<Unit filename="system/api/BusOut.h" />
-		<Unit filename="system/api/CAN.h" />
-		<Unit filename="system/api/CThunk.h" />
-		<Unit filename="system/api/CallChain.h" />
-		<Unit filename="system/api/Callback.h" />
-		<Unit filename="system/api/CircularBuffer.h" />
-		<Unit filename="system/api/DigitalIn.h" />
-		<Unit filename="system/api/DigitalInOut.h" />
-		<Unit filename="system/api/DigitalOut.h" />
-		<Unit filename="system/api/DirHandle.h" />
-		<Unit filename="system/api/Ethernet.h" />
-		<Unit filename="system/api/FileBase.h" />
-		<Unit filename="system/api/FileHandle.h" />
-		<Unit filename="system/api/FileLike.h" />
-		<Unit filename="system/api/FilePath.h" />
-		<Unit filename="system/api/FileSystemLike.h" />
-		<Unit filename="system/api/FunctionPointer.h" />
-		<Unit filename="system/api/I2C.h" />
-		<Unit filename="system/api/I2CSlave.h" />
-		<Unit filename="system/api/InterruptIn.h" />
-		<Unit filename="system/api/InterruptManager.h" />
-		<Unit filename="system/api/LocalFileSystem.h" />
-		<Unit filename="system/api/LowPowerTicker.h" />
-		<Unit filename="system/api/LowPowerTimeout.h" />
-		<Unit filename="system/api/LowPowerTimer.h" />
-		<Unit filename="system/api/PlatformMutex.h" />
-		<Unit filename="system/api/PortIn.h" />
-		<Unit filename="system/api/PortInOut.h" />
-		<Unit filename="system/api/PortOut.h" />
-		<Unit filename="system/api/PwmOut.h" />
-		<Unit filename="system/api/RawSerial.h" />
-		<Unit filename="system/api/SPI.h" />
-		<Unit filename="system/api/SPISlave.h" />
-		<Unit filename="system/api/Serial.h" />
-		<Unit filename="system/api/SerialBase.h" />
-		<Unit filename="system/api/SingletonPtr.h" />
-		<Unit filename="system/api/Stream.h" />
-		<Unit filename="system/api/Ticker.h" />
-		<Unit filename="system/api/Timeout.h" />
-		<Unit filename="system/api/Timer.h" />
-		<Unit filename="system/api/TimerEvent.h" />
-		<Unit filename="system/api/Transaction.h" />
-		<Unit filename="system/api/can_helper.h" />
-		<Unit filename="system/api/critical.h" />
-		<Unit filename="system/api/mbed.h" />
-		<Unit filename="system/api/mbed_assert.h" />
-		<Unit filename="system/api/mbed_debug.h" />
-		<Unit filename="system/api/mbed_error.h" />
-		<Unit filename="system/api/mbed_interface.h" />
-		<Unit filename="system/api/platform.h" />
-		<Unit filename="system/api/rtc_time.h" />
-		<Unit filename="system/api/semihost_api.h" />
-		<Unit filename="system/api/toolchain.h" />
-		<Unit filename="system/api/wait_api.h" />
-		<Unit filename="system/common/AnalogIn.cpp" />
-		<Unit filename="system/common/BusIn.cpp" />
-		<Unit filename="system/common/BusInOut.cpp" />
-		<Unit filename="system/common/BusOut.cpp" />
-		<Unit filename="system/common/CAN.cpp" />
-		<Unit filename="system/common/CallChain.cpp" />
-		<Unit filename="system/common/Ethernet.cpp" />
-		<Unit filename="system/common/FileBase.cpp" />
-		<Unit filename="system/common/FileLike.cpp" />
-		<Unit filename="system/common/FilePath.cpp" />
-		<Unit filename="system/common/FileSystemLike.cpp" />
-		<Unit filename="system/common/I2C.cpp" />
-		<Unit filename="system/common/I2CSlave.cpp" />
-		<Unit filename="system/common/InterruptIn.cpp" />
-		<Unit filename="system/common/InterruptManager.cpp" />
-		<Unit filename="system/common/LocalFileSystem.cpp" />
-		<Unit filename="system/common/RawSerial.cpp" />
-		<Unit filename="system/common/SPI.cpp" />
-		<Unit filename="system/common/SPISlave.cpp" />
-		<Unit filename="system/common/Serial.cpp" />
-		<Unit filename="system/common/SerialBase.cpp" />
-		<Unit filename="system/common/Stream.cpp" />
-		<Unit filename="system/common/Ticker.cpp" />
-		<Unit filename="system/common/Timeout.cpp" />
-		<Unit filename="system/common/Timer.cpp" />
-		<Unit filename="system/common/TimerEvent.cpp" />
+		<Unit filename="system/api/AnalogIn.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/AnalogOut.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/BusIn.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/BusInOut.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/BusOut.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/CAN.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/CThunk.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/CallChain.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/Callback.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/CircularBuffer.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/DigitalIn.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/DigitalInOut.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/DigitalOut.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/DirHandle.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/Ethernet.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/FileBase.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/FileHandle.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/FileLike.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/FilePath.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/FileSystemLike.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/FunctionPointer.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/I2C.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/I2CSlave.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/InterruptIn.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/InterruptManager.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/LocalFileSystem.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/LowPowerTicker.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/LowPowerTimeout.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/LowPowerTimer.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/PlatformMutex.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/PortIn.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/PortInOut.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/PortOut.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/PwmOut.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/RawSerial.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/SPI.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/SPISlave.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/Serial.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/SerialBase.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/SingletonPtr.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/Stream.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/Ticker.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/Timeout.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/Timer.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/TimerEvent.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/Transaction.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/can_helper.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/critical.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/mbed.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/mbed_assert.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/mbed_debug.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/mbed_error.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/mbed_interface.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/platform.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/rtc_time.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/semihost_api.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/toolchain.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/api/wait_api.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/AnalogIn.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/BusIn.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/BusInOut.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/BusOut.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/CAN.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/CallChain.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/Ethernet.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/FileBase.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/FileLike.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/FilePath.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/FileSystemLike.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/I2C.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/I2CSlave.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/InterruptIn.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/InterruptManager.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/LocalFileSystem.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/RawSerial.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/SPI.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/SPISlave.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/Serial.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/SerialBase.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/Stream.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/Ticker.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/Timeout.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/Timer.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/common/TimerEvent.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
 		<Unit filename="system/common/mbed_assert.c">
 			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/common/mbed_board.c">
 			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/common/mbed_critical.c">
 			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/common/mbed_error.c">
 			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/common/mbed_gpio.c">
 			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/common/mbed_interface.c">
 			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/common/mbed_lp_ticker_api.c">
 			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/common/mbed_pinmap_common.c">
 			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
 		</Unit>
-		<Unit filename="system/common/mbed_rtc_time.cpp" />
+		<Unit filename="system/common/mbed_rtc_time.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
 		<Unit filename="system/common/mbed_semihost_api.c">
 			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/common/mbed_ticker_api.c">
 			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/common/mbed_us_ticker_api.c">
 			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/common/mbed_wait_api.c">
 			<Option compilerVar="CC" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
 		</Unit>
-		<Unit filename="system/common/retarget.cpp" />
-		<Unit filename="system/hal/analogin_api.h" />
-		<Unit filename="system/hal/analogout_api.h" />
-		<Unit filename="system/hal/buffer.h" />
-		<Unit filename="system/hal/can_api.h" />
-		<Unit filename="system/hal/dma_api.h" />
-		<Unit filename="system/hal/ethernet_api.h" />
-		<Unit filename="system/hal/gpio_api.h" />
-		<Unit filename="system/hal/gpio_irq_api.h" />
-		<Unit filename="system/hal/i2c_api.h" />
-		<Unit filename="system/hal/lp_ticker_api.h" />
-		<Unit filename="system/hal/pinmap.h" />
-		<Unit filename="system/hal/port_api.h" />
-		<Unit filename="system/hal/pwmout_api.h" />
-		<Unit filename="system/hal/rtc_api.h" />
-		<Unit filename="system/hal/serial_api.h" />
-		<Unit filename="system/hal/sleep_api.h" />
-		<Unit filename="system/hal/spi_api.h" />
-		<Unit filename="system/hal/storage_abstraction/Driver_Common.h" />
-		<Unit filename="system/hal/storage_abstraction/Driver_Storage.h" />
-		<Unit filename="system/hal/ticker_api.h" />
-		<Unit filename="system/hal/us_ticker_api.h" />
+		<Unit filename="system/common/retarget.cpp">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/hal/analogin_api.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/hal/analogout_api.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/hal/buffer.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/hal/can_api.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/hal/dma_api.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/hal/ethernet_api.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/hal/gpio_api.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/hal/gpio_irq_api.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/hal/i2c_api.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/hal/lp_ticker_api.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/hal/pinmap.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/hal/port_api.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/hal/pwmout_api.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/hal/rtc_api.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/hal/serial_api.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/hal/sleep_api.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/hal/spi_api.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/hal/storage_abstraction/Driver_Common.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/hal/storage_abstraction/Driver_Storage.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/hal/ticker_api.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/hal/us_ticker_api.h">
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
+			<Option target="libmbed-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/rtos/rtos/Mail.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtos/MemoryPool.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtos/Mutex.cpp">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtos/Mutex.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtos/Queue.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtos/RtosTimer.cpp">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtos/RtosTimer.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtos/Semaphore.cpp">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtos/Semaphore.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtos/Thread.cpp">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtos/Thread.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtos/rtos.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtos/rtos_idle.c">
+			<Option compilerVar="CC" />
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtos/rtos_idle.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/HAL_CM.c">
+			<Option compilerVar="CC" />
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/RTX_CM_lib.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/RTX_Conf_CM.c">
+			<Option compilerVar="CC" />
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/RTX_Config.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/TARGET_RTOS_M4_M7/TOOLCHAIN_GCC/HAL_CM4.S">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/TARGET_RTOS_M4_M7/TOOLCHAIN_GCC/SVC_Table.S">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/cmsis_os.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_CMSIS.c">
+			<Option compilerVar="CC" />
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Event.c">
+			<Option compilerVar="CC" />
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Event.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_HAL_CM.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_List.c">
+			<Option compilerVar="CC" />
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_List.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Mailbox.c">
+			<Option compilerVar="CC" />
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Mailbox.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_MemBox.c">
+			<Option compilerVar="CC" />
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_MemBox.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Memory.c">
+			<Option compilerVar="CC" />
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Memory.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Mutex.c">
+			<Option compilerVar="CC" />
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Mutex.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_OsEventObserver.c">
+			<Option compilerVar="CC" />
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_OsEventObserver.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Robin.c">
+			<Option compilerVar="CC" />
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Robin.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Semaphore.c">
+			<Option compilerVar="CC" />
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Semaphore.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_System.c">
+			<Option compilerVar="CC" />
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_System.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Task.c">
+			<Option compilerVar="CC" />
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Task.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Time.c">
+			<Option compilerVar="CC" />
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Time.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Timer.c">
+			<Option compilerVar="CC" />
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Timer.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_TypeDef.h">
+			<Option target="librtos-nucleo-f401re" />
+		</Unit>
 		<Unit filename="system/targets/STM32F1xx/PeripheralPins.h">
 			<Option target="libmbed-nucleo-f103rb" />
 			<Option target="libmbed-bluepill-f103c8" />
