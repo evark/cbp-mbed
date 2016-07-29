@@ -3,19 +3,23 @@
 
 DigitalOut led1(LED1);
 RawSerial pc(SERIAL_TX, SERIAL_RX);
-int i=0;
+Mutex pc_mutex;
 
 void u1_thread(void const *args) {
     while (true) {
-        pc.printf("Tread 1\r\n");
-        Thread::wait(500);
+        pc_mutex.lock();
+        pc.putc('1');
+        pc_mutex.unlock();
+        Thread::wait(200);
     }
 }
 
 void u2_thread(void const *args) {
     while (true) {
-        pc.printf("Tread 2\r\n");
-        Thread::wait(750);
+        pc_mutex.lock();
+        pc.putc('2');
+        pc_mutex.unlock();
+        Thread::wait(500);
     }
 }
 
@@ -35,8 +39,10 @@ int main() {
     timer1.start(100);
 
     while (true) {
-        pc.printf("Thread 1 stack used/total:%d/%d\r\n", thread1.max_stack(),thread1.stack_size());
-        pc.printf("Thread 2 stack used/total:%d/%d\r\n", thread2.max_stack(),thread2.stack_size());
+        pc_mutex.lock();
+        pc.printf("\n(Thread 1 stack used/total:%d/%d)", thread1.used_stack(),thread1.stack_size());
+        pc.printf("\n(Thread 2 stack used/total:%d/%d)\n", thread2.used_stack(),thread2.stack_size());
+        pc_mutex.unlock();
         Thread::wait(1000);
     }
 }
