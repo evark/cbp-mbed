@@ -2,6 +2,6 @@
 <CodeBlocks_workspace_file>
 	<Workspace title="Workspace">
 		<Project filename="tests.cbp" />
-		<Project filename="build-libhal.cbp" />
+		<Project filename="build-libs.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
