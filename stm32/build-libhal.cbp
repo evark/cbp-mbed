@@ -1687,6 +1687,7 @@
 		<Unit filename="system/api/LowPowerTicker.h" />
 		<Unit filename="system/api/LowPowerTimeout.h" />
 		<Unit filename="system/api/LowPowerTimer.h" />
+		<Unit filename="system/api/PlatformMutex.h" />
 		<Unit filename="system/api/PortIn.h" />
 		<Unit filename="system/api/PortInOut.h" />
 		<Unit filename="system/api/PortOut.h" />
@@ -1765,9 +1766,7 @@
 		<Unit filename="system/common/mbed_pinmap_common.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="system/common/mbed_rtc_time.c">
-			<Option compilerVar="CC" />
-		</Unit>
+		<Unit filename="system/common/mbed_rtc_time.cpp" />
 		<Unit filename="system/common/mbed_semihost_api.c">
 			<Option compilerVar="CC" />
 		</Unit>
