@@ -155,9 +155,39 @@
 					<Add directory="system/rtos/rtx/TARGET_CORTEX_M" />
 				</Compiler>
 			</Target>
+			<Target title="librtos-bluepill-f103c8">
+				<Option output="variants/BLUEPILL_F103C8/librtos.a" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="_build/lib/${TARGET_NAME}" />
+				<Option type="2" />
+				<Option compiler="gnu_gcc_compiler_for_arm_5" />
+				<Compiler>
+					<Add option="-mcpu=cortex-m3" />
+					<Add option="-mthumb" />
+					<Add option="-mfpu=vfp" />
+					<Add option="-msoft-float" />
+					<Add option="-mthumb-interwork" />
+					<Add option="-D__CORTEX_M3" />
+					<Add option="-D__FPU_PRESENT=0" />
+					<Add option="-DARM_MATH_CM3" />
+					<Add option="-DTARGET_NUCLEO_F103RB" />
+					<Add option="-DTARGET_M3" />
+					<Add option="-DTARGET_CORTEX_M" />
+					<Add option="-DTARGET_STM" />
+					<Add option="-DTARGET_STM32F1" />
+					<Add option="-DTARGET_STM32F103RB" />
+					<Add option="-DTARGET_FF_ARDUINO" />
+					<Add option="-DTARGET_FF_MORPHO" />
+					<Add directory="system/CMSIS/STM32F1xx/Include" />
+					<Add directory="system/STM32F1xx_HAL_Driver/Inc" />
+					<Add directory="system/targets/STM32F1xx" />
+					<Add directory="variants/NUCLEO_F103RB" />
+					<Add directory="system/rtos/rtx/TARGET_CORTEX_M" />
+				</Compiler>
+			</Target>
 		</Build>
 		<VirtualTargets>
-			<Add alias="ALL" targets="libmbed-nucleo-f103rb;libmbed-nucleo-f401re;libmbed-nucleo-l476rg;libmbed-bluepill-f103c8;librtos-nucleo-f401re;" />
+			<Add alias="ALL" targets="libmbed-nucleo-f103rb;libmbed-nucleo-f401re;libmbed-nucleo-l476rg;libmbed-bluepill-f103c8;librtos-nucleo-f401re;librtos-bluepill-f103c8;" />
 		</VirtualTargets>
 		<Compiler>
 			<Add option="-fomit-frame-pointer" />
@@ -2509,60 +2539,84 @@
 		</Unit>
 		<Unit filename="system/rtos/rtos/Mail.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtos/MemoryPool.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtos/Mutex.cpp">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtos/Mutex.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtos/Queue.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtos/RtosTimer.cpp">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtos/RtosTimer.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtos/Semaphore.cpp">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtos/Semaphore.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtos/Thread.cpp">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtos/Thread.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtos/rtos.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtos/rtos_idle.c">
 			<Option compilerVar="CC" />
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtos/rtos_idle.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/HAL_CM.c">
 			<Option compilerVar="CC" />
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/RTX_CM_lib.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/RTX_Conf_CM.c">
 			<Option compilerVar="CC" />
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/RTX_Config.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/TARGET_M3/TOOLCHAIN_GCC/HAL_CM3.S">
+			<Option target="librtos-bluepill-f103c8" />
+		</Unit>
+		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/TARGET_M3/TOOLCHAIN_GCC/SVC_Table.S">
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/TARGET_RTOS_M4_M7/TOOLCHAIN_GCC/HAL_CM4.S">
 			<Option target="librtos-nucleo-f401re" />
@@ -2572,107 +2626,137 @@
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/cmsis_os.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_CMSIS.c">
 			<Option compilerVar="CC" />
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Event.c">
 			<Option compilerVar="CC" />
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Event.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_HAL_CM.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_List.c">
 			<Option compilerVar="CC" />
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_List.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Mailbox.c">
 			<Option compilerVar="CC" />
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Mailbox.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_MemBox.c">
 			<Option compilerVar="CC" />
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_MemBox.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Memory.c">
 			<Option compilerVar="CC" />
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Memory.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Mutex.c">
 			<Option compilerVar="CC" />
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Mutex.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_OsEventObserver.c">
 			<Option compilerVar="CC" />
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_OsEventObserver.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Robin.c">
 			<Option compilerVar="CC" />
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Robin.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Semaphore.c">
 			<Option compilerVar="CC" />
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Semaphore.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_System.c">
 			<Option compilerVar="CC" />
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_System.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Task.c">
 			<Option compilerVar="CC" />
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Task.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Time.c">
 			<Option compilerVar="CC" />
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Time.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Timer.c">
 			<Option compilerVar="CC" />
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_Timer.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/rtos/rtx/TARGET_CORTEX_M/rt_TypeDef.h">
 			<Option target="librtos-nucleo-f401re" />
+			<Option target="librtos-bluepill-f103c8" />
 		</Unit>
 		<Unit filename="system/targets/STM32F1xx/PeripheralPins.h">
 			<Option target="libmbed-nucleo-f103rb" />

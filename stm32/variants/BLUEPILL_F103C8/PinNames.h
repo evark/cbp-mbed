@@ -128,6 +128,9 @@ typedef enum {
 
     // Generic signals namings
     LED1        = PC_13,
+    LED2        = PC_13,
+    LED3        = PC_13,
+    LED4        = PC_13,
     SERIAL_TX   = PA_9,
     SERIAL_RX   = PA_10,
     USBTX       = PA_9,
