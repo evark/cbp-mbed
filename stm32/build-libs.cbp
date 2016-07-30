@@ -105,8 +105,8 @@
 					<Add option="-mcpu=cortex-m3" />
 					<Add option="-mthumb" />
 					<Add option="-mfpu=vfp" />
-					<Add option="-msoft-float" />
 					<Add option="-mthumb-interwork" />
+					<Add option="-msoft-float" />
 					<Add option="-D__CORTEX_M3" />
 					<Add option="-D__FPU_PRESENT=0" />
 					<Add option="-DARM_MATH_CM3" />
@@ -121,7 +121,7 @@
 					<Add directory="system/CMSIS/STM32F1xx/Include" />
 					<Add directory="system/STM32F1xx_HAL_Driver/Inc" />
 					<Add directory="system/targets/STM32F1xx" />
-					<Add directory="variants/NUCLEO_F103RB" />
+					<Add directory="variants/BLUEPILL_F103C8" />
 				</Compiler>
 			</Target>
 			<Target title="librtos-nucleo-f401re">
@@ -165,8 +165,8 @@
 					<Add option="-mcpu=cortex-m3" />
 					<Add option="-mthumb" />
 					<Add option="-mfpu=vfp" />
-					<Add option="-msoft-float" />
 					<Add option="-mthumb-interwork" />
+					<Add option="-msoft-float" />
 					<Add option="-D__CORTEX_M3" />
 					<Add option="-D__FPU_PRESENT=0" />
 					<Add option="-DARM_MATH_CM3" />
@@ -181,7 +181,7 @@
 					<Add directory="system/CMSIS/STM32F1xx/Include" />
 					<Add directory="system/STM32F1xx_HAL_Driver/Inc" />
 					<Add directory="system/targets/STM32F1xx" />
-					<Add directory="variants/NUCLEO_F103RB" />
+					<Add directory="variants/BLUEPILL_F103C8" />
 					<Add directory="system/rtos/rtx/TARGET_CORTEX_M" />
 				</Compiler>
 			</Target>

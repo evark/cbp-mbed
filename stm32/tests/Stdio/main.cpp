@@ -29,6 +29,6 @@ int main()
     printf("HCLKFreq:  %lu\r\n",HAL_RCC_GetHCLKFreq());
     for(;;)
     {
-        printf("%d ",Value++);
+        printf("%d %lu ",Value++, HAL_GetTick());
     }
 }

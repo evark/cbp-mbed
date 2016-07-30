@@ -1,25 +1,37 @@
-/* Test which brings default HelloWorld project from mbed online compiler
-   to be built under GCC.
-*/
 #include "mbed.h"
 
+I2C i2c(I2C_SDA , I2C_SCL );
 Serial pc(SERIAL_TX, SERIAL_RX);
-DigitalOut myled(LED1);
-I2C i2c(I2C_SDA, I2C_SCL);
 
-int main()
-{
-    pc.printf("I2C Scanner !\r\n");
+int main() {
+    pc.printf("\nI2C Scanner");
+    //i2c.frequency(100000);
+    while(1) {
+        int error, address;
+        int nDevices;
 
+        pc.printf("Scanning...\n");
 
-    while(1)
-        {
-            pc.puts("Scanning...");
+         nDevices = 0;
 
-            for(int i = 0; i < 128 ; i++) {
-                i2c.start();
-                if(i2c.write(i << 1)) pc.printf("0x%x ACK \r\n",i); // Send command string
-                i2c.stop();
+          for(address = 1; address < 127; address++ )
+          {
+            i2c.start();
+            error = i2c.write(address << 1); //We shift it left because mbed takes in 8 bit addreses
+            i2c.stop();
+            if (error == 1)
+            {
+              pc.printf("I2C device found at address 0x%X", address); //Returns 7-bit addres
+              nDevices++;
+            }
+
+          }
+          if (nDevices == 0)
+            pc.printf("No I2C devices found\n");
+          else
+            pc.printf("\ndone\n");
+
+          wait(5);           // wait 5 seconds for next scan
+
             }
         }
-}

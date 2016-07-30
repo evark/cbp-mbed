@@ -17,7 +17,7 @@
 #include "mbed.h"
 
 // Initialize a pins to perform analog input and digital output fucntions
-AnalogIn   ain(A0);
+AnalogIn   ain(PA_0);
 DigitalOut dout(LED1);
 Serial pc(SERIAL_TX, SERIAL_RX);
 
@@ -36,6 +36,6 @@ int main(void)
         // print the percentage and 16 bit normalized values
         pc.printf("percentage: %d%%\r\n", (int)(ain.read()*100.0f));
         pc.printf("normalized: 0x%04X \r\n", ain.read_u16());
-        wait(0.2f);
+        wait(0.2);
     }
 }
