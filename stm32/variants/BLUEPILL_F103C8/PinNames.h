@@ -26,9 +26,6 @@
  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *******************************************************************************
- *
- * Modified for STM32F103C6T8 by Zoltan Hudak, 2016
- *
  */
 #ifndef MBED_PINNAMES_H
 #define MBED_PINNAMES_H
@@ -88,6 +85,7 @@ typedef enum {
 
     PB_0  = 0x10,
     PB_1  = 0x11,
+    PB_2  = 0x12,
     PB_3  = 0x13,
     PB_4  = 0x14,
     PB_5  = 0x15,
@@ -119,17 +117,15 @@ typedef enum {
     PC_14 = 0x2E,
     PC_15 = 0x2F,
 
+    PD_2  = 0x32,
 
     // Arduino connector namings
-    A0          = PB_0,
-    A1          = PA_7,
-    A2          = PA_6,
-    A3          = PA_5,
-    A4          = PA_4,
-    A5          = PA_3,
-    A6          = PA_2,
-    A7          = PA_1,
-    A8          = PA_0,
+    A0          = PA_0,
+    A1          = PA_1,
+    A2          = PA_4,
+    A3          = PB_0,
+    A4          = PC_1,
+    A5          = PC_0,
     D0          = PA_3,
     D1          = PA_2,
     D2          = PA_10,
@@ -139,6 +135,7 @@ typedef enum {
     D6          = PB_10,
     D7          = PA_8,
     D8          = PA_9,
+    D9          = PC_7,
     D10         = PB_6,
     D11         = PA_7,
     D12         = PA_6,
@@ -151,16 +148,17 @@ typedef enum {
     LED2        = PC_13,
     LED3        = PC_13,
     LED4        = PC_13,
-    SERIAL_TX   = PA_9,
-    SERIAL_RX   = PA_10,
-    USBTX       = PA_9,
-    USBRX       = PA_10,
+//    USER_BUTTON = PB_4,
+    SERIAL_TX   = PA_2,
+    SERIAL_RX   = PA_3,
+    USBTX       = PA_2,
+    USBRX       = PA_3,
     I2C_SCL     = PB_6,
     I2C_SDA     = PB_7,
     SPI_MOSI    = PA_7,
     SPI_MISO    = PA_6,
     SPI_SCK     = PA_5,
-    SPI_CS      = PB_6,
+    SPI_CS      = PA_4,
     PWM_OUT     = PB_3,
 
     // Not connected

@@ -2,6 +2,7 @@
 
 I2C i2c(I2C_SDA , I2C_SCL );
 Serial pc(SERIAL_TX, SERIAL_RX);
+DigitalOut myled(LED1);
 
 int main() {
     pc.printf("\nI2C Scanner");
@@ -31,7 +32,7 @@ int main() {
           else
             pc.printf("\ndone\n");
 
-          wait(5);           // wait 5 seconds for next scan
-
+            wait(2);           // wait 5 seconds for next scan
+            myled = !myled;
             }
         }
