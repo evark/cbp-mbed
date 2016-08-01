@@ -197,7 +197,8 @@
 			<Add option="-fdata-sections" />
 			<Add option="-fno-exceptions" />
 			<Add option="-fno-delete-null-pointer-checks" />
-			<Add option="-g3" />
+			<Add option="-ggdb" />
+			<Add option="-Og" />
 			<Add option="-Wno-unused-parameter" />
 			<Add option="-Wno-missing-field-initializers" />
 			<Add option="-Wno-missing-braces" />
