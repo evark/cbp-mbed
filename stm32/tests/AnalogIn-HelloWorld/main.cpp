@@ -34,7 +34,7 @@ int main(void)
         }
 
         // print the percentage and 16 bit normalized values
-        pc.printf("percentage: %d%%\r\n", (int)(ain.read()*100.0f));
+        pc.printf("percentage: %f%%\r\n", ain.read());
         pc.printf("normalized: 0x%04X \r\n", ain.read_u16());
         wait(0.2);
     }

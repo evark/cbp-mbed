@@ -1,38 +1,36 @@
 #include "mbed.h"
 
-I2C i2c(I2C_SDA , I2C_SCL );
+I2C i2c(I2C_SDA, I2C_SCL );
 Serial pc(SERIAL_TX, SERIAL_RX);
 DigitalOut myled(LED1);
 
-int main() {
+int main()
+{
     pc.printf("\nI2C Scanner");
-    //i2c.frequency(100000);
+    //i2c.frequency(50000);
     while(1) {
         int error, address;
         int nDevices;
 
         pc.printf("Scanning...\n");
 
-         nDevices = 0;
+        nDevices = 0;
 
-          for(address = 1; address < 127; address++ )
-          {
+        for(address = 1; address < 127; address++ ) {
             i2c.start();
             error = i2c.write(address << 1); //We shift it left because mbed takes in 8 bit addreses
             i2c.stop();
-            if (error == 1)
-            {
-              pc.printf("I2C device found at address 0x%X", address); //Returns 7-bit addres
-              nDevices++;
-            }
-
-          }
-          if (nDevices == 0)
-            pc.printf("No I2C devices found\n");
-          else
-            pc.printf("\ndone\n");
-
-            wait(2);           // wait 5 seconds for next scan
-            myled = !myled;
+            if (error == 1) {
+                pc.printf("I2C device found at address 0x%X", address); //Returns 7-bit addres
+                nDevices++;
             }
         }
+        if (nDevices == 0)
+            pc.printf("No I2C devices found\n");
+        else
+            pc.printf("\ndone\n");
+
+        wait(2);           // wait 5 seconds for next scan
+        myled = !myled;
+    }
+}
