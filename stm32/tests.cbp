@@ -1107,6 +1107,56 @@
 					<Add after="arm-none-eabi-objcopy  -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).bin" />
 				</ExtraCommands>
 			</Target>
+			<Target title="rtos-basic-l476xx">
+				<Option output="_build/${TARGET_NAME}/${TARGET_NAME}" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="_build/${TARGET_NAME}" />
+				<Option type="5" />
+				<Option compiler="gnu_gcc_compiler_for_arm_5" />
+				<Compiler>
+					<Add option="-mthumb" />
+					<Add option="-mthumb-interwork" />
+					<Add option="-mcpu=cortex-m4" />
+					<Add option="-mfpu=fpv4-sp-d16" />
+					<Add option="-mfloat-abi=softfp" />
+					<Add option="-D__CORTEX_M4" />
+					<Add option="-D__FPU_PRESENT=1" />
+					<Add option="-DARM_MATH_CM4" />
+					<Add option="-DTARGET_NUCLEO_L476RG" />
+					<Add option="-DTARGET_M4" />
+					<Add option="-DTARGET_RTOS_M4_M7" />
+					<Add option="-DTARGET_CORTEX_M" />
+					<Add option="-DTARGET_STM" />
+					<Add option="-DTARGET_STM32L4" />
+					<Add option="-DTARGET_STM32L476RG" />
+					<Add option="-DTARGET_FF_ARDUINO" />
+					<Add option="-DTARGET_FF_MORPHO" />
+					<Add directory="system/CMSIS/STM32L4xx/Include" />
+					<Add directory="system/STM32L4xx_HAL_Driver/Inc" />
+					<Add directory="system/targets/STM32L4xx" />
+					<Add directory="variants/NUCLEO_L476RG" />
+					<Add directory="system/rtos/rtos" />
+					<Add directory="system/rtos/rtx/TARGET_CORTEX_M" />
+				</Compiler>
+				<Linker>
+					<Add option="-mcpu=cortex-m4" />
+					<Add option="-mfpu=fpv4-sp-d16" />
+					<Add option="-mfloat-abi=softfp" />
+					<Add option="-TSTM32L476XX.ld" />
+					<Add option="-Wl,-whole-archive variants/NUCLEO_L476RG/libmbed.a variants/NUCLEO_L476RG/librtos.a -Wl,-no-whole-archive" />
+					<Add option="-lstdc++" />
+					<Add option="-lsupc++" />
+					<Add option="-lm" />
+					<Add option="-lgcc" />
+					<Add option="-lc" />
+					<Add option="-lnosys" />
+					<Add directory="variants/NUCLEO_L476RG" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="arm-none-eabi-size $(TARGET_OUTPUT_FILE)" />
+					<Add after="arm-none-eabi-objcopy  -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).bin" />
+				</ExtraCommands>
+			</Target>
 			<Target title="rtos-uart-bluepill">
 				<Option output="_build/${TARGET_NAME}/${TARGET_NAME}" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="" />
@@ -1206,10 +1256,60 @@
 					<Add after="arm-none-eabi-objcopy  -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).bin" />
 				</ExtraCommands>
 			</Target>
+			<Target title="rtos-uart-l476xx">
+				<Option output="_build/${TARGET_NAME}/${TARGET_NAME}" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="_build/${TARGET_NAME}" />
+				<Option type="5" />
+				<Option compiler="gnu_gcc_compiler_for_arm_5" />
+				<Compiler>
+					<Add option="-mthumb" />
+					<Add option="-mthumb-interwork" />
+					<Add option="-mcpu=cortex-m4" />
+					<Add option="-mfpu=fpv4-sp-d16" />
+					<Add option="-mfloat-abi=softfp" />
+					<Add option="-D__CORTEX_M4" />
+					<Add option="-D__FPU_PRESENT=1" />
+					<Add option="-DARM_MATH_CM4" />
+					<Add option="-DTARGET_NUCLEO_L476RG" />
+					<Add option="-DTARGET_M4" />
+					<Add option="-DTARGET_RTOS_M4_M7" />
+					<Add option="-DTARGET_CORTEX_M" />
+					<Add option="-DTARGET_STM" />
+					<Add option="-DTARGET_STM32L4" />
+					<Add option="-DTARGET_STM32L476RG" />
+					<Add option="-DTARGET_FF_ARDUINO" />
+					<Add option="-DTARGET_FF_MORPHO" />
+					<Add directory="system/CMSIS/STM32L4xx/Include" />
+					<Add directory="system/STM32L4xx_HAL_Driver/Inc" />
+					<Add directory="system/targets/STM32L4xx" />
+					<Add directory="variants/NUCLEO_L476RG" />
+					<Add directory="system/rtos/rtos" />
+					<Add directory="system/rtos/rtx/TARGET_CORTEX_M" />
+				</Compiler>
+				<Linker>
+					<Add option="-mcpu=cortex-m4" />
+					<Add option="-mfpu=fpv4-sp-d16" />
+					<Add option="-mfloat-abi=softfp" />
+					<Add option="-TSTM32L476XX.ld" />
+					<Add option="-Wl,-whole-archive variants/NUCLEO_L476RG/libmbed.a variants/NUCLEO_L476RG/librtos.a -Wl,-no-whole-archive" />
+					<Add option="-lstdc++" />
+					<Add option="-lsupc++" />
+					<Add option="-lm" />
+					<Add option="-lgcc" />
+					<Add option="-lc" />
+					<Add option="-lnosys" />
+					<Add directory="variants/NUCLEO_L476RG" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="arm-none-eabi-size $(TARGET_OUTPUT_FILE)" />
+					<Add after="arm-none-eabi-objcopy  -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).bin" />
+				</ExtraCommands>
+			</Target>
 		</Build>
 		<VirtualTargets>
-			<Add alias="ALL" targets="blank-bluepill;blank-f103xb;blank-f401xe;blank-l476xx;i2c-bluepill;i2c-f103xb;i2c-f401xe;i2c-am2330-f401xe;i2c-test-bluepill;ssd1306-bluepill;stdio-bluepill;stdio-f103xb;stdio-f401xe;stdio-l476xx;uart-f103xb;uart-f401xe;uart-l476xx;AnalogIn-HelloWorld-f103xb;AnalogIn-HelloWorld-f401xe;AnalogIn-HelloWorld-l476xx;Ticker-f401xe;rtos-basic-bluepill;rtos-basic-f401xe;rtos-uart-bluepill;rtos-uart-f401xe;" />
-			<Add alias="BLUEPILL" targets="blank-bluepill;i2c-bluepill;ssd1306-bluepill;rtos-basic-bluepill;rtos-uart-bluepill;stdio-bluepill;" />
+			<Add alias="ALL" targets="blank-bluepill;blank-f103xb;blank-f401xe;blank-l476xx;i2c-bluepill;i2c-f103xb;i2c-f401xe;i2c-am2330-f401xe;i2c-test-bluepill;ssd1306-bluepill;stdio-bluepill;stdio-f103xb;stdio-f401xe;stdio-l476xx;uart-f103xb;uart-f401xe;uart-l476xx;AnalogIn-HelloWorld-f103xb;AnalogIn-HelloWorld-f401xe;AnalogIn-HelloWorld-l476xx;Ticker-f401xe;rtos-basic-bluepill;rtos-basic-f401xe;rtos-uart-f401xe;rtos-uart-bluepill;" />
+			<Add alias="BLUEPILL" targets="blank-bluepill;i2c-bluepill;stdio-bluepill;rtos-basic-bluepill;rtos-uart-bluepill;ssd1306-bluepill;" />
 		</VirtualTargets>
 		<Compiler>
 			<Add option="-fomit-frame-pointer" />
@@ -1316,10 +1416,12 @@
 		<Unit filename="tests/rtos-basic/main.cpp">
 			<Option target="rtos-basic-f401xe" />
 			<Option target="rtos-basic-bluepill" />
+			<Option target="rtos-basic-l476xx" />
 		</Unit>
 		<Unit filename="tests/rtos-uart/main.cpp">
 			<Option target="rtos-uart-f401xe" />
 			<Option target="rtos-uart-bluepill" />
+			<Option target="rtos-uart-l476xx" />
 		</Unit>
 		<Extensions>
 			<code_completion />

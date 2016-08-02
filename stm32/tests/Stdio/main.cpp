@@ -13,12 +13,16 @@
    limitations under the License.
 */
 /* Basic unit test for C Standard I/O routines. */
+/* Added custom SysTick (normaly it is disabled on mbed) */
+
 #include "mbed.h"
 
 
 int main()
 {
     int Value = -1;
+
+    us_ticker_init();
 
     printf("\r\n\r\nMBED Test Suite\r\n");
     printf("Standard I/O Unit Tests\r\n");
@@ -29,6 +33,6 @@ int main()
     printf("HCLKFreq:  %lu\r\n",HAL_RCC_GetHCLKFreq());
     for(;;)
     {
-        printf("%d %lu ",Value++, HAL_GetTick());
+        printf("%d %lu\r",Value++, us_ticker_read());
     }
 }
