@@ -5,12 +5,14 @@ DigitalOut led1(LED1);
 RawSerial pc(SERIAL_TX, SERIAL_RX);
 Mutex pc_mutex;
 
+extern volatile uint32_t os_time;  // This is RTOS Ticker
+
 void u1_thread(void const *args) {
     while (true) {
         pc_mutex.lock();
         pc.putc('1');
         pc_mutex.unlock();
-        Thread::wait(200);
+        Thread::wait(75);
     }
 }
 
@@ -40,6 +42,7 @@ int main() {
 
     while (true) {
         pc_mutex.lock();
+        pc.printf("\n Tick:%d", os_time);
         pc.printf("\n(Thread 1 stack used/total:%d/%d)", thread1.used_stack(),thread1.stack_size());
         pc.printf("\n(Thread 2 stack used/total:%d/%d)\n", thread2.used_stack(),thread2.stack_size());
         pc_mutex.unlock();
