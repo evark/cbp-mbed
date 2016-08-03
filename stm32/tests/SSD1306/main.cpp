@@ -17,21 +17,26 @@
 
 
 DigitalOut myled(LED1);
-Adafruit_SSD1306_I2C display(I2C_SDA, I2C_SCL, PC_13, 0x7C, 64, 128);
+Adafruit_SSD1306_I2C *display;
 
 int main() {
-    int k = 0;
-    display.begin(2);
-    display.splash();
-    wait(2.0);
-    display.clearDisplay();
+    printf("\r\n\r\nMBED Test Suite\r\n");
+    printf("Standard I/O Unit Tests\r\n");
 
-    display.printf("%ux%u OLED Display\r\n", display.width(), display.height());
+    us_ticker_init();
+    display = new Adafruit_SSD1306_I2C(I2C_SDA, I2C_SCL, PC_13, 0x3C<<1, 64, 128);
+    int k = 0;
+    display->begin(2);
+    display->splash();
+    wait(2.0);
+    display->clearDisplay();
+
+    display->printf("%ux%u OLED Display\r\n", display->width(), display->height());
     while(1)
     {
         myled = !myled;
-        display.printf("%u\r", k++);
-        display.display();
+        display->printf("%u\r", k++);
+        display->display();
         wait(0.1);
     }
 }

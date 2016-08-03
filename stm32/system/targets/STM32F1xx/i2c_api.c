@@ -266,18 +266,37 @@ int i2c_byte_read(i2c_t *obj, int last)
 int i2c_byte_write(i2c_t *obj, int data)
 {
     I2C_TypeDef *i2c = (I2C_TypeDef *)(obj->i2c);
-    int timeout;
+    uint32_t flag1 = 0, flag2 = 0;
+    uint32_t lastevent = 0;
+    int timeout,event;
+
+
 
     i2c->DR = (uint8_t)data;
 
-    // Wait until the byte is transmitted
-    timeout = FLAG_TIMEOUT;
-    while ((__HAL_I2C_GET_FLAG(&I2cHandle, I2C_FLAG_TXE) == RESET) &&
-            (__HAL_I2C_GET_FLAG(&I2cHandle, I2C_FLAG_BTF) == RESET)) {
-        if ((timeout--) == 0) {
+#define  I2C_EVENT_MASTER_BYTE_TRANSMITTED                 ((uint32_t)0x00070084)
+#define FLAG_Mask                                       ((uint32_t)0x00FFFFFF)
+    while(1) {
+  /* Read the I2Cx status register */
+    flag1 = i2c->SR1;
+    flag2 = i2c->SR2;
+    flag2 = flag2 << 16;
+
+  /* Get the last event value from I2C status register */
+    lastevent = (flag1 | flag2) & FLAG_Mask;
+    event = ((lastevent & I2C_EVENT_MASTER_BYTE_TRANSMITTED ) == I2C_EVENT_MASTER_BYTE_TRANSMITTED );
+
+    if (event) break;
+    if ((timeout--) == 0) {
             return 0;
-        }
     }
+    }
+    //while ((__HAL_I2C_GET_FLAG(&I2cHandle, I2C_FLAG_TXE) == RESET) ||
+    //        (__HAL_I2C_GET_FLAG(&I2cHandle, I2C_FLAG_BTF) == RESET)) {
+    //    if ((timeout--) == 0) {
+    //        return 0;
+    //    }
+    //}
 
     return 1;
 }

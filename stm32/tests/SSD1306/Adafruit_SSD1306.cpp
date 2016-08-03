@@ -284,8 +284,18 @@ void Adafruit_SSD1306_SPI::sendDisplayBuffer()
 	    , mi2c(SDA, SCL)
 	    , mi2cAddress(i2cAddress)
 	    {
-	    	//mi2c.frequency(400000);
-        	mi2c.start();
+	    	mi2c.frequency(400000);
+        	while(1) {
+        	    mi2c.start();
+                int error = mi2c.write(i2cAddress); //We shift it left because mbed takes in 8 bit addreses
+                mi2c.stop();
+                if (error == 1) {
+                    printf("I2C device found at address 0x%X\n", i2cAddress); //Returns 7-bit addres
+                    break;
+                }else
+                    printf("I2C device Not Found\n"); //Returns 7-bit addres
+                wait_ms(200);
+            }
 		    begin();
 		    splash();
 	    };
@@ -295,8 +305,7 @@ uint8_t Adafruit_SSD1306_I2C::command(uint8_t c)
 		char buff[2];
 		buff[0] = 0; // Command Mode
 		buff[1] = c;
-		mi2c.write(mi2cAddress, buff, sizeof(buff));
-
+		int ret = mi2c.write(mi2cAddress, buff, sizeof(buff));
 		return c;
 	}
 

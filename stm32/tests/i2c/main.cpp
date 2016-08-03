@@ -6,6 +6,8 @@ DigitalOut myled(LED1);
 
 int main()
 {
+    us_ticker_init();
+    i2c.frequency(400000);
     pc.printf("\nI2C Scanner");
     //i2c.frequency(50000);
     while(1) {
