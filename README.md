@@ -1,8 +1,8 @@
 # cbp-mbed
-STM32 mbed projects using Code::Blocks and gcc.
+STM32 mbed/SDK projects using Code::Blocks and GCC.
 
-Project includes sources from mbed packed as Code::Blocks IDE project. 
+Project includes sources from mbed/SDK packed as Code::Blocks IDE library project with some test programs for STM32F103, STM32F401 and STM32L476 MCUs. 
 
- -- mbed souces are updated to official mbed SDK version 122
+
  
 
