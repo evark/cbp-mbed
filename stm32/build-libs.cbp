@@ -2443,12 +2443,18 @@
 			<Option target="libmbed-nucleo-l476rg" />
 			<Option target="libmbed-bluepill-f103c8" />
 		</Unit>
-		<Unit filename="system/common/mbed_wait_api.c">
+		<Unit filename="system/common/mbed_wait_api_no_rtos.c">
 			<Option compilerVar="CC" />
+			<Option target="libmbed-bluepill-f103c8" />
 			<Option target="libmbed-nucleo-f103rb" />
 			<Option target="libmbed-nucleo-f401re" />
 			<Option target="libmbed-nucleo-l476rg" />
+		</Unit>
+		<Unit filename="system/common/mbed_wait_api_rtos.cpp">
 			<Option target="libmbed-bluepill-f103c8" />
+			<Option target="libmbed-nucleo-f103rb" />
+			<Option target="libmbed-nucleo-f401re" />
+			<Option target="libmbed-nucleo-l476rg" />
 		</Unit>
 		<Unit filename="system/common/retarget.cpp">
 			<Option target="libmbed-nucleo-f103rb" />

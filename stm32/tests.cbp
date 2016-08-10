@@ -1806,7 +1806,7 @@
 			</Target>
 		</Build>
 		<VirtualTargets>
-			<Add alias="ALL" targets="blank-bluepill;blank-f103xb;blank-f401xe;blank-l476xx;i2c-bluepill;i2c-f103xb;i2c-f401xe;i2c-am2330-f401xe;i2c-test-bluepill;rtc-f401xe;rtc-l476xx;ssd1306-bluepill;stdio-bluepill;stdio-f103xb;stdio-f401xe;stdio-l476xx;uart-f103xb;uart-f401xe;uart-l476xx;AnalogIn-HelloWorld-f103xb;AnalogIn-HelloWorld-f401xe;AnalogIn-HelloWorld-l476xx;Ticker-f401xe;Timer64-f401xe;Timer64-l476xx;rtos-basic-bluepill;rtos-basic-f401xe;rtos-basic-l476xx;rtos-timer-f401xe;rtos-timer-l476xx;rtos-uart-f401xe;rtos-uart-l476xx;rtos-uart-bluepill;" />
+			<Add alias="ALL" targets="blank-bluepill;blank-f103xb;blank-f401xe;blank-l476xx;i2c-bluepill;i2c-f103xb;i2c-f401xe;i2c-am2330-f401xe;i2c-test-bluepill;rtc-bluepill;rtc-f401xe;rtc-l476xx;ssd1306-bluepill;stdio-bluepill;stdio-f103xb;stdio-f401xe;stdio-l476xx;uart-bluepill;uart-f103xb;uart-f401xe;uart-l476xx;AnalogIn-HelloWorld-f103xb;AnalogIn-HelloWorld-f401xe;AnalogIn-HelloWorld-l476xx;Ticker-bluepill;Ticker-f401xe;Timer64-f401xe;Timer64-l476xx;rtos-basic-bluepill;rtos-basic-f401xe;rtos-basic-l476xx;rtos-timer-bluepill;rtos-timer-f401xe;rtos-timer-l476xx;rtos-uart-bluepill;rtos-uart-f401xe;rtos-uart-l476xx;rtos-counter-f401xe;" />
 			<Add alias="BLUEPILL" targets="blank-bluepill;i2c-bluepill;ssd1306-bluepill;stdio-bluepill;rtos-uart-bluepill;rtos-basic-bluepill;" />
 		</VirtualTargets>
 		<Compiler>
