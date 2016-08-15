@@ -36,11 +36,22 @@
 extern "C" {
 #endif
 
-// See stm32f3xx_hal_gpio.h and stm32f3xx_hal_gpio_ex.h for values of MODE, PUPD and AFNUM
-#define STM_PIN_DATA(MODE, PUPD, AFNUM)  ((int)(((AFNUM) << 7) | ((PUPD) << 4) | ((MODE) << 0)))
+#define STM_PIN_DATA(MODE, PUPD, AFNUM)  ((int)(((MODE  & 0x0F) << 0) |\
+                                                ((PUPD  & 0x07) << 4) |\
+                                                ((AFNUM & 0x0F) << 7)))
+
+#define STM_PIN_DATA_EXT(MODE, PUPD, AFNUM, CHANNEL, INVERTED)  ((int)(((MODE     & 0x0F) <<  0) |\
+                                                                       ((PUPD     & 0x07) <<  4) |\
+                                                                       ((AFNUM    & 0x0F) <<  7) |\
+                                                                       ((CHANNEL  & 0x0F) << 11) |\
+                                                                       ((INVERTED & 0x01) << 15)))
+
 #define STM_PIN_MODE(X)   (((X) >> 0) & 0x0F)
 #define STM_PIN_PUPD(X)   (((X) >> 4) & 0x07)
 #define STM_PIN_AFNUM(X)  (((X) >> 7) & 0x0F)
+#define STM_PIN_CHANNEL(X)  (((X) >> 11) & 0x0F)
+#define STM_PIN_INVERTED(X) (((X) >> 15) & 0x01)
+
 #define STM_MODE_INPUT              (0)
 #define STM_MODE_OUTPUT_PP          (1)
 #define STM_MODE_OUTPUT_OD          (2)
@@ -119,47 +130,59 @@ typedef enum {
 
     PD_2  = 0x32,
 
-    // Arduino connector namings
+    // PCB printout
     A0          = PA_0,
     A1          = PA_1,
-    A2          = PA_4,
-    A3          = PB_0,
-    A4          = PC_1,
-    A5          = PC_0,
-    D0          = PA_3,
-    D1          = PA_2,
-    D2          = PA_10,
-    D3          = PB_3,
-    D4          = PB_5,
-    D5          = PB_4,
-    D6          = PB_10,
-    D7          = PA_8,
-    D8          = PA_9,
-    D9          = PC_7,
-    D10         = PB_6,
-    D11         = PA_7,
-    D12         = PA_6,
-    D13         = PA_5,
-    D14         = PB_9,
-    D15         = PB_8,
+    A2          = PA_2,
+    A3          = PA_3,
+    A4          = PA_4,
+    A5          = PA_5,
+    A6          = PA_6,
+    A7          = PA_7,
+    A8          = PA_8,
+    A9          = PA_9,
+    A10         = PA_10,
+    A11         = PA_11,
+    A12         = PA_12,
+    A15         = PA_15,
+
+    B0          = PB_0,
+    B1          = PB_1,
+    B2          = PB_2,
+    B3          = PB_3,
+    B4          = PB_4,
+    B5          = PB_5,
+    B6          = PB_6,
+    B7          = PB_7,
+    B8          = PB_8,
+    B9          = PB_9,
+    B10         = PB_10,
+    B11         = PB_11,
+    B12         = PB_12,
+    B13         = PB_13,
+    B14         = PB_14,
+    B15         = PB_15,
+
+    C13         = PC_13,
+    C14         = PC_14,
+    C15         = PC_15,
 
     // Generic signals namings
     LED1        = PC_13,
     LED2        = PC_13,
     LED3        = PC_13,
     LED4        = PC_13,
-//    USER_BUTTON = PB_4,
-    SERIAL_TX   = PA_2,
-    SERIAL_RX   = PA_3,
-    USBTX       = PA_2,
-    USBRX       = PA_3,
+    SERIAL_TX   = PA_9,
+    SERIAL_RX   = PA_10,
+    USBTX       = PA_9,
+    USBRX       = PA_10,
     I2C_SCL     = PB_6,
     I2C_SDA     = PB_7,
     SPI_MOSI    = PA_7,
     SPI_MISO    = PA_6,
     SPI_SCK     = PA_5,
     SPI_CS      = PA_4,
-    PWM_OUT     = PB_3,
+    PWM_OUT     = PB_5,
 
     // Not connected
     NC = (int)0xFFFFFFFF
