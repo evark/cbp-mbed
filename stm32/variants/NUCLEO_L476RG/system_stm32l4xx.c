@@ -26,43 +26,20 @@
   *
   *   This file configures the system clock as follows:
   *=============================================================================
+  * System clock source                | 1- PLL_HSE_EXTC        | 3- PLL_HSI
+  *                                    | (external 8 MHz clock) | (internal 16 MHz)
+  *                                    | 2- PLL_HSE_XTAL        | or PLL_MSI
+  *                                    | (external 8 MHz xtal)  | (internal 4 MHz)
   *-----------------------------------------------------------------------------
-  *        System Clock source                    | MSI
+  * SYSCLK(MHz)                        | 48                     | 80
   *-----------------------------------------------------------------------------
-  *        SYSCLK(Hz)                             | 4000000
+  * AHBCLK (MHz)                       | 48                     | 80
   *-----------------------------------------------------------------------------
-  *        HCLK(Hz)                               | 4000000
+  * APB1CLK (MHz)                      | 48                     | 80
   *-----------------------------------------------------------------------------
-  *        AHB Prescaler                          | 1
+  * APB2CLK (MHz)                      | 48                     | 80
   *-----------------------------------------------------------------------------
-  *        APB1 Prescaler                         | 1
-  *-----------------------------------------------------------------------------
-  *        APB2 Prescaler                         | 1
-  *-----------------------------------------------------------------------------
-  *        PLL_M                                  | 1
-  *-----------------------------------------------------------------------------
-  *        PLL_N                                  | 8
-  *-----------------------------------------------------------------------------
-  *        PLL_P                                  | 7
-  *-----------------------------------------------------------------------------
-  *        PLL_Q                                  | 2
-  *-----------------------------------------------------------------------------
-  *        PLL_R                                  | 2
-  *-----------------------------------------------------------------------------
-  *        PLLSAI1_P                              | NA
-  *-----------------------------------------------------------------------------
-  *        PLLSAI1_Q                              | NA
-  *-----------------------------------------------------------------------------
-  *        PLLSAI1_R                              | NA
-  *-----------------------------------------------------------------------------
-  *        PLLSAI2_P                              | NA
-  *-----------------------------------------------------------------------------
-  *        PLLSAI2_Q                              | NA
-  *-----------------------------------------------------------------------------
-  *        PLLSAI2_R                              | NA
-  *-----------------------------------------------------------------------------
-  *        Require 48MHz for USB OTG FS,          | Disabled
-  *        SDIO and RNG clock                     |
+  * USB capable (48 MHz precise clock) | YES                    | NO
   *-----------------------------------------------------------------------------
   *=============================================================================
   ******************************************************************************
@@ -154,7 +131,7 @@
   */
 
 // Select the clock sources (default is PLL_MSI) to start with (0=OFF, 1=ON)
-#define USE_PLL_HSE_EXTC (0) // Use external clock
+#define USE_PLL_HSE_EXTC (1) // Use external clock
 #define USE_PLL_HSE_XTAL (0) // Use external xtal
 #define USE_PLL_HSI      (0) // Use HSI/MSI internal clock (0=MSI, 1=HSI)
 #define DEBUG_MCO        (0) // Output the MCO on PA8 for debugging (0=OFF, 1=SYSCLK, 2=HSE, 3=HSI, 4=MSI)
@@ -250,7 +227,7 @@ void SystemInit(void)
   /* Configure the System clock source, PLL Multiplier and Divider factors,
      AHB/APBx prescalers and Flash settings */
   SetSysClock();
-
+  
   /* Reset the timer to avoid issues after the RAM initialization */
   TIM_MST_RESET_ON;
   TIM_MST_RESET_OFF;
@@ -369,8 +346,8 @@ void SystemCoreClockUpdate(void)
 /**
   * @brief  Configures the System clock source, PLL Multiplier and Divider factors,
   *               AHB/APBx prescalers and Flash settings
-  * @note   This function should be called only once the RCC clock configuration
-  *         is reset to the default reset state (done in SystemInit() function).
+  * @note   This function should be called only once the RCC clock configuration  
+  *         is reset to the default reset state (done in SystemInit() function).             
   * @param  None
   * @retval None
   */
@@ -400,7 +377,7 @@ void SetSysClock(void)
       }
     }
   }
-
+  
   // Output clock on MCO1 pin(PA8) for debugging purpose
 #if DEBUG_MCO == 1
   HAL_RCC_MCOConfig(RCC_MCO1, RCC_MCO1SOURCE_SYSCLK, RCC_MCODIV_1);
@@ -426,7 +403,7 @@ uint8_t SetSysClock_PLL_HSE(uint8_t bypass)
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_SYSCLK;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_MSI;
   HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0);
-
+    
   // Enable HSE oscillator and activate PLL with HSE as source
   RCC_OscInitStruct.OscillatorType        = RCC_OSCILLATORTYPE_HSE | RCC_OSCILLATORTYPE_HSI;
   if (bypass == 0)
@@ -440,7 +417,7 @@ uint8_t SetSysClock_PLL_HSE(uint8_t bypass)
   RCC_OscInitStruct.HSIState              = RCC_HSI_OFF;
   RCC_OscInitStruct.PLL.PLLSource         = RCC_PLLSOURCE_HSE; // 8 MHz
   RCC_OscInitStruct.PLL.PLLState          = RCC_PLL_ON;
-
+  
   // Non-USB configuration : sysclock = 80MHz
   //RCC_OscInitStruct.PLL.PLLM              = 1; // VCO input clock = 8 MHz (8 MHz / 1)
   //RCC_OscInitStruct.PLL.PLLN              = 20; // VCO output clock = 160 MHz (8 MHz * 20)
@@ -454,7 +431,7 @@ uint8_t SetSysClock_PLL_HSE(uint8_t bypass)
   RCC_OscInitStruct.PLL.PLLP              = 7; // PLLSAI3 clock = 27.4 MHz (192 MHz / 7)
   RCC_OscInitStruct.PLL.PLLQ              = 4; // USB clock (PLL48M1) = 48 MHz (192 MHz / 4) --> OK for USB
   RCC_OscInitStruct.PLL.PLLR              = 4; // PLL clock = 48 MHz (192 MHz / 4)
-
+  
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     return 0; // FAIL
@@ -476,7 +453,7 @@ uint8_t SetSysClock_PLL_HSE(uint8_t bypass)
   RCC_OscInitStruct.MSIState       = RCC_MSI_OFF;
   RCC_OscInitStruct.PLL.PLLState   = RCC_PLL_NONE; // No PLL update
   HAL_RCC_OscConfig(&RCC_OscInitStruct);
-
+  
   // Output clock on MCO1 pin(PA8) for debugging purpose
 #if DEBUG_MCO == 2
   if (bypass == 0)
@@ -484,7 +461,7 @@ uint8_t SetSysClock_PLL_HSE(uint8_t bypass)
   else
     HAL_RCC_MCOConfig(RCC_MCO1, RCC_MCO1SOURCE_HSE, RCC_MCODIV_1); // 8 MHz
 #endif
-
+  
   return 1; // OK
 }
 #endif
@@ -497,12 +474,12 @@ uint8_t SetSysClock_PLL_HSI(void)
 {
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
-
+ 
   // Select MSI as system clock source to allow modification of the PLL configuration
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_SYSCLK;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_MSI;
   HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0);
-
+  
   // Enable HSI oscillator and activate PLL with HSI as source
   RCC_OscInitStruct.OscillatorType       = RCC_OSCILLATORTYPE_HSI | RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState             = RCC_HSE_OFF;
@@ -519,7 +496,7 @@ uint8_t SetSysClock_PLL_HSI(void)
   {
     return 0; // FAIL
   }
-
+  
   // Select PLL as system clock source and configure the HCLK, PCLK1 and PCLK2 clocks dividers
   RCC_ClkInitStruct.ClockType      = (RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2);
   RCC_ClkInitStruct.SYSCLKSource   = RCC_SYSCLKSOURCE_PLLCLK; // 80 MHz
@@ -536,12 +513,12 @@ uint8_t SetSysClock_PLL_HSI(void)
   RCC_OscInitStruct.MSIState       = RCC_MSI_OFF;
   RCC_OscInitStruct.PLL.PLLState   = RCC_PLL_NONE; // No PLL update
   HAL_RCC_OscConfig(&RCC_OscInitStruct);
-
+  
   // Output clock on MCO1 pin(PA8) for debugging purpose
 #if DEBUG_MCO == 3
   HAL_RCC_MCOConfig(RCC_MCO1, RCC_MCO1SOURCE_HSI, RCC_MCODIV_1); // 16 MHz
 #endif
-
+  
   return 1; // OK
 }
 #endif
@@ -553,7 +530,7 @@ uint8_t SetSysClock_PLL_MSI(void)
 {
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
-
+  
   // Enable LSE Oscillator to automatically calibrate the MSI clock
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_LSE;
   RCC_OscInitStruct.PLL.PLLState   = RCC_PLL_NONE; // No PLL update
@@ -561,7 +538,7 @@ uint8_t SetSysClock_PLL_MSI(void)
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) == HAL_OK) {
     RCC->CR |= RCC_CR_MSIPLLEN; // Enable MSI PLL-mode
   }
-
+  
   // Enable MSI oscillator and activate PLL with MSI as source
   RCC_OscInitStruct.OscillatorType       = RCC_OSCILLATORTYPE_MSI | RCC_OSCILLATORTYPE_HSI | RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.MSIState             = RCC_MSI_ON;
@@ -580,7 +557,7 @@ uint8_t SetSysClock_PLL_MSI(void)
   {
     return 0; // FAIL
   }
-
+  
   // Select PLL as system clock source and configure the HCLK, PCLK1 and PCLK2 clocks dividers
   RCC_ClkInitStruct.ClockType      = (RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2);
   RCC_ClkInitStruct.SYSCLKSource   = RCC_SYSCLKSOURCE_PLLCLK; // 80 MHz
@@ -591,12 +568,12 @@ uint8_t SetSysClock_PLL_MSI(void)
   {
     return 0; // FAIL
   }
-
+  
   // Output clock on MCO1 pin(PA8) for debugging purpose
 #if DEBUG_MCO == 4
   HAL_RCC_MCOConfig(RCC_MCO1, RCC_MCO1SOURCE_MSI, RCC_MCODIV_2); // 2 MHz
 #endif
-
+  
   return 1; // OK
 }
 
